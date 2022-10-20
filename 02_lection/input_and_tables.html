@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs and tables</title>
+</head>
+<body>
+    <div>
+    <header>
+        <H1>Homework 2</H1>
+    </header>    
+    </div>
+    <h2>Form and articles</h2>
+    <form action="" method="post">
+        <div>
+        <!-- Кнопка яка відповідає за сповіщення -->
+            <input type="button" onclick="alert('Героям Слава!')" value="Слава Україні!"> <br>
+        </div>
+        <br>
+        <div>
+        <!-- Checkbox -->
+            <input type="checkbox"> Я погоджуюсь на умови які нижче <br>
+            <input type="checkbox"> Я погоджуюсь не погоджуватись зі всім що я тут натисну <br>
+        </div>
+        <div>
+            <!-- Палітра вибору кольору -->
+            <input type="color"> Виберіть колір крові орка <br>
+        </div>
+        <div>
+        <!-- Вибір дати -->
+            <label for="someData">Виберіть сьогоднішню дату</label>
+            <input type="date" id="someData" name="someData"> вона ні на що не вплине, але дякую <br>
+        </div>
+
+        <div>
+        <!-- Вибір дати та часу -->
+        <label for="SomeData_And_Time">Виберіть якусь дату та вкажіть час коли він помре</label>
+            <input type="datetime-local" id="SomeData_And_Time" name="SomeData_And_Time">
+        </div>
+        <div>
+        <!-- Email -->
+            <label for="email">Введіть емайл на який вам буде приходити спам</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+        <!-- Text -->
+                <label for="">Веддіть ваше ім'я</label>
+                <input type="text" id="YouName"> <br>
+        </div>
+    </form>
+</body>
+</html>
