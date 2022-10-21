@@ -15,35 +15,121 @@
     <h2>Form and articles</h2>
     <form action="" method="post">
         <div>
-        <!-- Кнопка яка відповідає за сповіщення -->
+        <!-- button що відповідає за сповіщення -->
             <input type="button" onclick="alert('Героям Слава!')" value="Слава Україні!"> <br>
         </div>
         <br>
         <div>
         <!-- Checkbox -->
-            <input type="checkbox"> Я погоджуюсь на умови які нижче <br>
-            <input type="checkbox"> Я погоджуюсь не погоджуватись зі всім що я тут натисну <br>
+            <label for="check1">Press if you want</label>
+            <input type="checkbox" id="check1"> Я погоджуюсь на умови які нижче <br>
         </div>
         <div>
-            <!-- Палітра вибору кольору -->
-            <input type="color"> Виберіть колір крові орка <br>
+            <label for="check2">Press if you want too</label>
+            <input type="checkbox" id="check2"> Я погоджуюсь не погоджуватись зі всім що я тут натисну <br>
         </div>
+        <br>
+        <div>
+            <!-- Палітра вибору кольору -->
+            <label for="someColor">Тицьни на колір розімни пальці</label>
+            <input type="color" id="someColor"> молодець, рухаємось далі <br>
+        </div>
+        <br>
         <div>
         <!-- Вибір дати -->
             <label for="someData">Виберіть сьогоднішню дату</label>
             <input type="date" id="someData" name="someData"> вона ні на що не вплине, але дякую <br>
         </div>
-
+        <br>
         <div>
         <!-- Вибір дати та часу -->
-        <label for="SomeData_And_Time">Виберіть якусь дату та вкажіть час коли він помре</label>
-            <input type="datetime-local" id="SomeData_And_Time" name="SomeData_And_Time">
+            <label for="SomeData_And_Time">Виберіть якусь дату та час</label>
+            <input type="datetime-local" id="SomeData_And_Time"> 
         </div>
+        <br>
         <div>
         <!-- Email -->
-            <label for="email">Введіть емайл на який вам буде приходити спам</label>
-            <input type="email" id="email" name="email">
+            <label for="mail">Введіть емайл на який вам буде приходити спам</label>
+            <input type="email" id="mail" >
         </div>
+        <br>
+        <div>
+        <!-- FILE -->
+            <label for="fileUpld">Завантажте мем</label>
+            <input type="file" id="fileUpld" >
+        </div>
+        <br>
+        <div>
+        <!-- Hidden -->
+            <label for="security">Тут буде інформація для прокачаних</label>
+            <input type="hidden" id="security" > (NO)
+        </div>
+        <br>
+        <div>
+        <!-- Image -->
+            <input type="image" src="img/example.png" width="52" height="52">
+        </div>
+        <br>
+        <div>
+        <!-- Month -->
+            <label for="monthANDyear">Ще одне поле для вводу року та місяця</label>
+            <input type="month" id="monthANDyear"> дуже не зручно вибрати 1200 рік д.н. ери, потрібно виправити
+        </div>
+        <br>
+        <div>
+        <!-- Number -->
+            <label for="range1">Вибрати від -1 до 5</label>
+            <input type="number" id="range1" min="-1" max="5"> воно на диво дає мінусові значення
+        </div>
+        <br>
+        <div>
+            <!-- Password -->
+            <label for="pwd">Тут місце для паролю</label>
+            <input type="password" id="pwd">
+        </div>
+        <br>
+        <!-- ТУТ БУДЕ ПАРУ RADIO треба зрозуміти чи потрібен для кожного DIV -->
+        <div>
+            <label for="radiocheck1">підпис перед зоною кліку</label><br>
+            <input type="radio" id="radiocheck1" value="Result1" name="Check">підпис після зони кліку
+        </div>
+        <div>
+            <label for="radiocheck2">А тут тільки перед</label><br>
+            <input type="radio" id="radiocheck2" value="Result2" name="Check">
+        </div>
+        <div>
+            <label for="radiocheck3"></label>
+            <input type="radio" id="radiocheck3"  value="Result3" name="Check"> А тут тільки після
+        </div>
+        <p> Доречі, input type="radio" це перший тип де дійсно знадобився NAME. Він показує з яких елементів ми робимо вибірку </p>
+        <br>
+        <div>
+        <!-- RANGE -->
+            <label for="range2">Вибрати від "сферичний кінь у вакуумі" </label>
+            <input type="range" id="range2" min="0" max="1"> "закон Ньютона"
+        </div>
+        <br>
+        <div>
+        <!-- RESET -->
+            <label for="RESTART">Кнопка яка очистить всю форму</label>
+            <input type="reset" id="RESTART" >
+        </div>
+        <br>
+        <div>
+        <!-- SEARCH -->
+            <label for="s">Поле де можна налаштувати пошук</label>
+            <input name="s" placeholder="текст пошуку" type="search">
+            <button type="submit">Шукати</button>
+        </div>
+        <br>
+        <div>
+            <label for="SendRESULT">Кнопка яка щось зробить з результатами того що ви тут понатискали</label>
+            <input type="submit" id="SendRESULT" >
+        </div>
+
+
+
+
         <div>
         <!-- Text -->
                 <label for="">Веддіть ваше ім'я</label>
