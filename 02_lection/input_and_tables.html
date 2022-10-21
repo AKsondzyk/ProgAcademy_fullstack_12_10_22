@@ -123,17 +123,38 @@
         </div>
         <br>
         <div>
+        <!-- Submit -->
             <label for="SendRESULT">Кнопка яка щось зробить з результатами того що ви тут понатискали</label>
             <input type="submit" id="SendRESULT" >
         </div>
-
-
-
-
+        <br>
+        <div>
+        <!-- Tel number -->
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+        <!-- patern взяв з гугла і поняття не маю що воно таке P.S. у фігурних дужках к-сть цифр -->
+        </div>
+        <br>
         <div>
         <!-- Text -->
                 <label for="">Веддіть ваше ім'я</label>
                 <input type="text" id="YouName"> <br>
+        </div>
+        <br>
+        <div>
+        <!-- Time -->
+            <label for="appt">Вибрати час</label>
+            <input type="time" id="appt" >
+        </div>
+        <br>
+        <div>
+            <label for="homepage">Поле для введення користувачем посилання на щось </label>
+            <input type="url" id="homepage" name="homepage">
+        </div>
+        <br>
+        <div>
+            <label for="week">Select a week:</label>
+            <input type="week" id="week" name="week">
         </div>
     </form>
 </body>
