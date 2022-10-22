@@ -30,15 +30,25 @@
         </div>
         <br>
         <div>
-            <!-- Палітра вибору кольору -->
+        <!-- Палітра вибору кольору -->
             <label for="someColor">Тицьни на колір розімни пальці</label>
             <input type="color" id="someColor"> молодець, рухаємось далі <br>
         </div>
         <br>
         <div>
+        <!-- SEARCH -->
+            <label for="s">Поле де можна налаштувати пошук</label>
+            <input name="s" placeholder="що ви шукаєте ?" type="search">
+            <button type="submit">Шукати</button>
+        </div>
+        <br>
+            <hr>
+        <p>Різні типи вибору дати та часу</p>
+            <hr>
+        <div>
         <!-- Вибір дати -->
             <label for="someData">Виберіть сьогоднішню дату</label>
-            <input type="date" id="someData" name="someData"> вона ні на що не вплине, але дякую <br>
+            <input type="date" id="someData" > вона ні на що не вплине, але дякую <br>
         </div>
         <br>
         <div>
@@ -48,9 +58,53 @@
         </div>
         <br>
         <div>
+        <!-- Time -->
+            <label for="appt">Вибрати час</label>
+            <input type="time" id="appt" >
+        </div>
+        <br>
+        <div>
+         <!-- Month -->
+            <label for="monthANDyear">Ще одне поле для вводу року та місяця</label>
+            <input type="month" id="monthANDyear"> дуже не зручно вибрати 1200 рік д.н. ери, потрібно виправити
+        </div>
+        <br>
+        <div>
+            <label for="week">Поле вибору по тижні</label>
+            <input type="week" id="week" >
+        </div>
+        <p>останні два поля не працюють у Mozila та IE</p>
+            <hr>
+        <p>Поля для введення інформації</p>
+        <hr>
+        <div>
+        <!-- Text -->
+            <label for="YouName">Веддіть ваше ім'я</label>
+            <input type="text" id="YouName"> <br>
+        </div>
+        <br>
+        <div>
+        <!-- Phone number -->
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+        <!-- patern взяв з гугла і поняття не маю що воно таке P.S. у фігурних дужках к-сть цифр -->
+        </div>
+        <br>
+        <div>
         <!-- Email -->
             <label for="mail">Введіть емайл на який вам буде приходити спам</label>
             <input type="email" id="mail" >
+        </div>
+        <br>
+        <div>
+        <!-- Password -->
+            <label for="pwd">Тут місце для паролю</label>
+            <input type="password" id="pwd">
+        </div>
+        <br>
+        <div>
+            <label for="userLink">Поле для введення користувачем посилання на щось </label>
+            <input type="url" id="userLink" >
         </div>
         <br>
         <div>
@@ -59,6 +113,7 @@
             <input type="file" id="fileUpld" >
         </div>
         <br>
+            <hr>
         <div>
         <!-- Hidden -->
             <label for="security">Тут буде інформація для прокачаних</label>
@@ -67,13 +122,7 @@
         <br>
         <div>
         <!-- Image -->
-            <input type="image" src="img/example.png" width="52" height="52">
-        </div>
-        <br>
-        <div>
-        <!-- Month -->
-            <label for="monthANDyear">Ще одне поле для вводу року та місяця</label>
-            <input type="month" id="monthANDyear"> дуже не зручно вибрати 1200 рік д.н. ери, потрібно виправити
+            <input type="image" src="img/example.png" width="68" height="68">
         </div>
         <br>
         <div>
@@ -81,13 +130,7 @@
             <label for="range1">Вибрати від -1 до 5</label>
             <input type="number" id="range1" min="-1" max="5"> воно на диво дає мінусові значення
         </div>
-        <br>
-        <div>
-            <!-- Password -->
-            <label for="pwd">Тут місце для паролю</label>
-            <input type="password" id="pwd">
-        </div>
-        <br>
+        <br> 
         <!-- ТУТ БУДЕ ПАРУ RADIO треба зрозуміти чи потрібен для кожного DIV -->
         <div>
             <label for="radiocheck1">підпис перед зоною кліку</label><br>
@@ -101,8 +144,9 @@
             <label for="radiocheck3"></label>
             <input type="radio" id="radiocheck3"  value="Result3" name="Check"> А тут тільки після
         </div>
+            <hr>
         <p> Доречі, input type="radio" це перший тип де дійсно знадобився NAME. Він показує з яких елементів ми робимо вибірку </p>
-        <br>
+            <hr>
         <div>
         <!-- RANGE -->
             <label for="range2">Вибрати від "сферичний кінь у вакуумі" </label>
@@ -115,47 +159,18 @@
             <input type="reset" id="RESTART" >
         </div>
         <br>
-        <div>
-        <!-- SEARCH -->
-            <label for="s">Поле де можна налаштувати пошук</label>
-            <input name="s" placeholder="текст пошуку" type="search">
-            <button type="submit">Шукати</button>
-        </div>
-        <br>
+
         <div>
         <!-- Submit -->
             <label for="SendRESULT">Кнопка яка щось зробить з результатами того що ви тут понатискали</label>
             <input type="submit" id="SendRESULT" >
         </div>
-        <br>
-        <div>
-        <!-- Tel number -->
-            <label for="phone">Enter your phone number:</label>
-            <input type="tel" id="phone" name="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
-        <!-- patern взяв з гугла і поняття не маю що воно таке P.S. у фігурних дужках к-сть цифр -->
-        </div>
-        <br>
-        <div>
-        <!-- Text -->
-                <label for="">Веддіть ваше ім'я</label>
-                <input type="text" id="YouName"> <br>
-        </div>
-        <br>
-        <div>
-        <!-- Time -->
-            <label for="appt">Вибрати час</label>
-            <input type="time" id="appt" >
-        </div>
-        <br>
-        <div>
-            <label for="homepage">Поле для введення користувачем посилання на щось </label>
-            <input type="url" id="homepage" name="homepage">
-        </div>
-        <br>
-        <div>
-            <label for="week">Select a week:</label>
-            <input type="week" id="week" name="week">
-        </div>
     </form>
+        <hr>
+        <hr>
+    <h2>Tables</h2>
+    <table>
+        
+    </table>
 </body>
 </html>
