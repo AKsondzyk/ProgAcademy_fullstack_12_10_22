@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    /* background-color: yellow; */
+    padding: 10px;
+}
+.wrapper{
+    width: 940px;
+    margin: 0 auto;
+}
+.logo,.links{
+    width: 466px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.links{
+    text-align: right;
+}
+/* Чому не можна '.facebook,.twiter' в 24 рядку об'єднати в перелік '.logo,.links' 15 рядку ??? */
+.facebook,.twiter{
+    display: inline-block;
+    vertical-align: middle;
+}
+.facebook{
+    margin-right: 17px;
+}
+/* ------------------------------------------------------------------------- */
+/* -------------------------------PART-1------------------------------------ */
+/* ------------------------------------------------------------------------- */
+.part1{
+    background-color: #FAC960;
+    padding-top: 91.8px;
+    padding-bottom: 92.2px;
+    text-align: center;
+}
+h2{
+    font-weight: 400;
+    color: #8A6D2F;
+    font-size: 44px;
+}
+#mail{
+    border: 1px;
+    border-color: black;
+    height: 54px;
+    width: 560px;
+    padding-left: 36px;
+    font-size: 30px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+#Find{
+    background: #a8863d;
+    color: #fff;
+    border-color: #a8863d;
+    box-shadow: none;
+    width: 240px;
+    height: 54px;
+    vertical-align: middle;
+}
+/* ------------------------------------------------------------------------- */
+/* -------------------------------PART-2------------------------------------ */
+/* ------------------------------------------------------------------------- */
+.part2{
+    text-align: center;
+    padding-top: 80.8px;
+    padding-bottom: 81.63px;
+}
+.title2{
+    color: rgb(0, 0, 0, 0.56);
+    font-weight: 400;
+    font-size: 37px;
+}
+p{
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(0, 0, 0, 0.4);
+    width: 819px;
+}
+img[src="img/infinity-icon.png"]{
+ padding-top: 56px;   
+}
+/* ------------------------------------------------------------------------- */
+/* -------------------------------PART-3------------------------------------ */
+/* ------------------------------------------------------------------------- */
