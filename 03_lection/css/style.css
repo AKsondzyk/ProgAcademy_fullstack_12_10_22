@@ -4,8 +4,10 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+/* --------------------- */
+/* ----------HEADER----- */
+/* --------------------- */
 header{
-    /* background-color: yellow; */
     padding: 10px;
 }
 .wrapper{
@@ -20,7 +22,6 @@ header{
 .links{
     text-align: right;
 }
-/* Чому не можна '.facebook,.twiter' в 24 рядку об'єднати в перелік '.logo,.links' 15 рядку ??? */
 .facebook,.twiter{
     display: inline-block;
     vertical-align: middle;
@@ -28,23 +29,37 @@ header{
 .facebook{
     margin-right: 17px;
 }
-/* ------------------------------------------------------------------------- */
-/* -------------------------------PART-1------------------------------------ */
-/* ------------------------------------------------------------------------- */
-.part1{
+/* ------------------------------------------ */
+/* --------------Part-Email------------------ */
+/* ------------------------------------------ */
+.OrangeBCGRND{
     background-color: #FAC960;
-    padding-top: 91.8px;
-    padding-bottom: 92.2px;
-    text-align: center;
 }
-h2{
+.EmailPART{
+    /* background-color: #FAC960; */
+    padding-top: 91.8px;
+    text-align: center;
+    margin: 0 auto;
+}
+.GetInlimited{
     font-weight: 400;
     color: #8A6D2F;
     font-size: 44px;
+    margin: 0 auto;
+}
+.NoMoreWo{
+    font-weight: 400;
+    color: #8A6D2F;
+    font-size: 43px;
+    margin: 0 auto;
+}
+form{
+    padding-top: 39.8px;
+    padding-bottom: 92.2px;
 }
 #mail{
     border: 1px;
-    border-color: black;
+    border-color: #999999;
     height: 54px;
     width: 560px;
     padding-left: 36px;
@@ -60,29 +75,106 @@ h2{
     width: 240px;
     height: 54px;
     vertical-align: middle;
+    font-size: 30px;
+} 
+/* ------------------------------ */
+/* ----------PART-Unlimited------ */
+/* ------------------------------ */
+.GreyBCGRND{
+    background-color: #f2f2f2;
 }
-/* ------------------------------------------------------------------------- */
-/* -------------------------------PART-2------------------------------------ */
-/* ------------------------------------------------------------------------- */
-.part2{
+.PartUnlimited{
     text-align: center;
-    padding-top: 80.8px;
-    padding-bottom: 81.63px;
+    padding-top: 77px;
+    padding-bottom: 81.62px;
 }
-.title2{
+.UnlimSpace{
     color: rgb(0, 0, 0, 0.56);
     font-weight: 400;
     font-size: 37px;
 }
-p{
+.UnlimParagraph{
     font-size: 23px;
     font-weight: 400;
     color: rgb(0, 0, 0, 0.4);
     width: 819px;
+    margin-left: 61px;
 }
 img[src="img/infinity-icon.png"]{
- padding-top: 56px;   
+ margin-top: 56px;   
 }
-/* ------------------------------------------------------------------------- */
-/* -------------------------------PART-3------------------------------------ */
-/* ------------------------------------------------------------------------- */
+/* -------------------------------- */
+/* ----------PART-Mobile Acces----- */
+/* -------------------------------- */
+.PartMOBILE{
+    text-align: center;
+    padding-top: 76px;
+}
+.MobileACC{
+    color: rgb(0, 0, 0, 0.56);
+    font-weight: 400;
+    font-size: 37px;
+}
+.MobileParagraph{
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(0, 0, 0, 0.4);
+    width: 819px;
+    margin-left: 61px;
+}
+img[src="img/MObile.png"]{
+ margin-top: 32px;
+ padding-bottom: 19.43px
+}
+ /* ------------------------------- */
+ /* ----------Part-Invite---------- */
+ /* ------------------------------- */
+.PartInvite{
+    background-color: #FAC960;
+    padding-top: 58.38px;
+    padding-bottom: 57.62px;
+    text-align: center;
+    margin: 0 auto;
+}
+.Invite{
+    color: #8A6D2F;
+    font-weight: 400;
+    font-size: 37px;
+}
+.InviteParagraph{
+    font-size: 22px;
+    font-weight: 400;
+    color: rgb(0, 0, 0, 0.4);
+    width: 506px;
+    margin-left: 217px;
+}
+.EmptyButton{
+    width: 61px;
+    height: 22px;
+    border: 1px;
+    border-color: #758696;
+    border-radius: 3px;
+    font-size: 17px;
+    color: #999999;   
+}
+ /* ------------------------------- */
+ /* ----------Footer--------------- */
+ /* ------------------------------- */
+footer{
+    padding-top:81px;
+    padding-bottom: 81px;
+    background-color: #f2f2f2;
+}
+.footerLoGo{
+    text-align: center;
+}
+.twiterFOOTER,.facebookFOOTER,.mailFOOTER{
+    display: inline-block;
+    /* vertical-align: middle; */
+    text-align: center;
+    padding-right: 18px;
+    margin-top: 18px;
+}
+.twiterFOOTER{
+    margin-left: 420px;
+}
