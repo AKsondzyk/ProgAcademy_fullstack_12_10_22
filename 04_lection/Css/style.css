@@ -37,8 +37,11 @@ body>div{
 }
 .Glyph{
     padding-left: 52.61px;
-    padding-top: -133.11px;
-    transform: rotate(-1.89deg);
+    transform: rotate(0.11deg);
+    position: absolute;
+    top: 144px;
+    height: 227.36px;
+    width: 400px;
 }
 /* ---------------------- */
 /* -----Block Circle----- */
@@ -60,5 +63,11 @@ body>div{
     border-radius: 222px;
 }
 .GlyphCircle{
-    transform: rotate(-1.89deg);
+    /* transform: rotate(-1.89deg); */
+    transform: rotate(0.11deg);
+    position: absolute;
+    top: 244px;
+    height: 203.74px;
+    width: 358.44px;
+    padding-left: 40px;
 }
