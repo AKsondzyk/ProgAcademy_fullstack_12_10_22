@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* ------------------------------------- */
+/* ---------------Header---------------- */
+/* ------------------------------------- */
+header{
+    margin: 0 auto;
+    width: 100%;
+}
+.Logo{
+    display: inline-block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    font-weight: 600;
+    font-size: 27px;
+    color: #000000;
+} 
+.headLinks{
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+    display: inline-block;
+    float: right;
+    color: #000000;
+    margin-right: 12px;
+    font-size: 21px;
+    font-weight: 500;
+    vertical-align: middle; 
+}
+.HeadLinks24{
+    margin-right: 24px;
+}
+.headButton{
+    margin-left: 32px;
+    color: #2203E4;
+    height: 45px;
+    width: 128px;
+    border: 1px solid #2203E4;
+    background-color: #ffffff; 
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+} 
+/* ------------------------------------- */ 
+/* --------------TitlePart-------------- */
+/* ------------------------------------- */
+.wrapper{
+    width: 1269px;
+    margin: 0 auto;
+}
+/* --------Left PART----------- */
+.leftTitle{
+    float: left;
+    width: 611px;
+    padding-left: 10px;
+    padding-top: 256px;
+    padding-bottom: 256px;
+    display: inline-block;
+}
+.LandingTitle{
+    padding-top: 10px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 47px;
+    color: #000000;
+}
+.LandingParagraph{
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+.AutorsButton{
+    margin-right: 24px;
+    width: 94px;
+    height: 39px;
+    color: #ffffff;
+    background-color: #0062FF;
+    font-weight: 400;
+    font-size: 16px;
+}
+.CheckDemoButton{
+    border: 1px solid #575757;
+    width: 135px;
+    height: 39px;
+    background-color: #ffffff;
+    color: #575757;
+    font-weight: 400;
+    font-size: 16px;
+}
+/* --------Right PART----------- */
+.BIGbuttonPhone{
+    margin-left: 48px;
+    display: inline-block;
+    margin-top: 118.81px;
+} 
+/* ------------------------------- */
+/* ----------AUTORS PART---------- */
+/* ------------------------------- */
+.AutorsPart{
+    width: 1190px;
+    text-align: center;
+    float: left;
+    padding-bottom: 36px;
+}
+.Autors{
+    margin: 0 auto;
+    padding-bottom: 12px;
+    font-size: 36px;
+    font-weight: 600;
+}
+.AutorsPAragraph{
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+}
