@@ -285,5 +285,148 @@ h4,p{
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    
+}
+/* ------------------------------- */
+/* -------Check Demo PART--------- */
+/* ------------------------------- */
+.CheckDemo{
+    padding-top: 63px;
+    text-align: center;
+    margin: 0 auto;
+}
+.ChDemo{
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 12px;
+}
+.ChParagraph{
+    width: 611px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #575757;
+    padding-bottom: 44px;
+}
+/* -------video part----------- */
+.videoPart{
+    width: 1103px;
+    margin-left: 80px;
+    padding-bottom: 131px;
+}
+.videoDescription,.video{
+    display: inline-block;
+}
+.video{
+    float: right;
+}
+.videoDescription{
+    width: 611px;
+    text-align: center;
+    padding-top: 11.5px;
+}
+.videoArticle{
+    font-size: 21px;
+    font-weight: 500;
+    color: #000000;
+    padding-bottom: 12px;
+}
+.videoParagraph{
+    font-size: 16px;
+    font-weight: 400;
+    color: #575757;
+    padding-bottom: 24px;
+}
+.videoParagraph.theLast{
+    padding-bottom: 11.5px;
+}
+/* ------------------------------- */
+/* -------Opinions PART----------- */
+/* ------------------------------- */
+.OrangeBCGRND{
+    background-color: #FFBE0B;
+    text-align: center;
+    padding-bottom: 68px;
+}
+.Opinions{
+    padding-top: 67px;
+    padding-bottom: 42px;
+}
+.OpinionsTitle{
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 12px;
+}
+.OpinionsParagraph{
+    font-size: 16px;
+    font-weight: 400;
+    color: #575757;
+    width: 611px;
+}
+.slaider{
+    position: relative;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    display: inline-block;
+    /* width: 702px; */
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.slaider::before{
+    content: url(../IMG/Frame\ 38.png);
+    display: inline-block;
+    position: absolute;
+    left: -744px;
+    top: -18px;
+    opacity: 0.45;
+}
+.slaider::after{
+    content: url(../IMG/Frame\ 38.png);
+    display: inline-block;
+    position: absolute;
+    right: -744px;
+    top: -18px;
+    opacity: 0.45;
+}
+.litlThink,.whoANDwhat{
+    display: inline-block;
+}
+.litlThink{
+    margin-left: 16px;
+    margin-right: 12px;
+    padding-top: 82.5px;
+    padding-bottom: 82.5px;
+    float: left;
+}
+.whoANDwhat{
+    text-align: left;
+    float: right; 
+    width: 611px;
+    padding-top: 47.5px;
+}
+.whoIs{
+    font-size: 27px;
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 3px;
+}
+.whoIs::after{
+    content: url(../IMG/stars.png);
+    vertical-align: middle;
+    margin-left: 7px;
+}
+.whatJob{
+    padding-bottom: 16px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #000000;
+}
+.whatThinks{
+    font-size: 16px;
+    font-weight: 400;
+    color: #575757;
 }
