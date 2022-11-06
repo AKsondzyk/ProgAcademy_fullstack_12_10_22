@@ -34,7 +34,10 @@ header{
     margin-right: 12px;
     font-size: 21px;
     font-weight: 500;
-    vertical-align: middle; 
+    vertical-align: middle;
+}
+a{
+    text-decoration: none; 
 }
 .HeadLinks24{
     margin-right: 24px;
