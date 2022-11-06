@@ -81,6 +81,7 @@ header{
     color: #000000;
 }
 .AutorsButton{
+    border: 0;
     margin-right: 24px;
     width: 94px;
     height: 39px;
@@ -271,7 +272,7 @@ h4,p{
     font-weight: 400;
     color: #ffffff;
 }
-/* ------ForWho button */
+/* ------ForWho button--- */
 .FWButton{
     padding-bottom: 71px;
     text-align: center;
@@ -372,7 +373,6 @@ h4,p{
     background-color: #f3f3f3;
     border-radius: 12px;
     display: inline-block;
-    /* width: 702px; */
     margin-left: 32px;
     margin-right: 32px;
 }
@@ -430,3 +430,113 @@ h4,p{
     font-weight: 400;
     color: #575757;
 }
+/* ------------------------- */
+/* -----Start with US PART-- */
+/* ------------------------- */
+.StartWithUs{
+    text-align: center;
+    padding-top: 89px;
+    padding-bottom: 74px;
+}
+.StartAbstract{
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000;
+    padding-bottom: 12px;
+}
+.StartParagraph{
+    font-size: 16px;
+    font-weight: 400;
+    color: #575757;
+    width: 611px;
+}
+/* -----------phone part---- */
+.LitPhoneIMG,.StartDescription{
+    display: inline-block;
+    vertical-align: middle;
+}
+.LitPhoneIMG{
+    padding-left: 155px;
+}
+.StartDescription{
+    padding-left: 13px;
+}
+.reviewsDIV{
+    vertical-align: middle;
+}
+.reviews{
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+.reviews::before{
+    content: url(../IMG/stars.png);
+    padding-right: 17px;
+    top: 7px;
+    position: relative;
+}
+.DescripTitle{
+    padding-top: 16px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #2203E4;
+    padding-bottom: 16px;
+}
+.DescripPrgrph{
+    font-size: 16px;
+    font-weight: 400;
+    color: #575757;
+    padding-bottom: 16px;
+}
+.StartWUsButton{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #0062FF;
+    width: 122px;
+    height: 39px;
+    border: 0;
+}
+.LitlPhoneBox{
+    padding-bottom: 74px;
+}
+/* -------------------- */
+/* -------Discount----- */
+/* -------------------- */
+.discountTitle{
+    text-align: center;
+    padding-bottom: 28px;
+}
+.lastQuestion{
+    font-size: 27px;
+    font-weight: 600;
+    color: #000000;
+}
+.formEmail{
+    text-align: center;
+    padding-bottom: 100px;
+}
+input[type="mail"]{
+    width: 508px;
+    padding-left: 24px;
+    width: 508px;
+    height: 70px;
+    border-radius: 12px;
+    border: 0;
+    background-color: rgba(58, 134, 255, 0.2) ;
+    color: #2203E4;
+    font-size: 16px;
+    font-weight: 400;
+}
+.submitt{
+    margin-top: 14px;
+    text-align: center;
+    background-color: #0062FF;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    width: 508px;
+    height: 39px;
+    border: 0;
+} 
