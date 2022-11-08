@@ -58,6 +58,7 @@ a{
 .wrapper{
     width: 1269px;
     margin: 0 auto;
+    overflow: hidden;
 }
 /* --------Left PART----------- */
 .leftTitle{
@@ -528,7 +529,7 @@ input[type="mail"]{
     border-radius: 12px;
     border: 0;
     background-color: rgba(58, 134, 255, 0.2) ;
-    color: #2203E4;
+    /* color: #2203E4; */
     font-size: 16px;
     font-weight: 400;
 }
@@ -543,3 +544,19 @@ input[type="mail"]{
     height: 39px;
     border: 0;
 } 
+/* --Color placeholder Email--- */
+/* .colorPLH::placeholder{
+    color: #2203E4;
+} */
+.colorPLH::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #2203E4;
+  }
+  .colorPLH::-moz-placeholder { /* Firefox 19+ */
+    color: #2203E4;
+  }
+  .colorPLH:-ms-input-placeholder { /* IE 10+ */
+    color: #2203E4;
+  }
+  .colorPLH:-moz-placeholder { /* Firefox 18- */
+    color: #2203E4;
+  }
