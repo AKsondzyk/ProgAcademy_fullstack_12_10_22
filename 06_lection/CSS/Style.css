@@ -1,0 +1,154 @@
+*{
+   margin: 0 auto; 
+   font-family: 'Avenir', sans-serif;
+   font-weight: 400;
+   box-sizing: border-box;
+}
+body{
+    background-image: url("../IMG/Bacgrnd.png"),
+                      url("../IMG/Bacgrnd_small.png");
+    background-repeat: no-repeat;
+    background-position: right 0 top 115px, 
+                         left 0 top 521px;
+}
+/* -------------------------------------- */
+/* ----------------Header---------------- */
+/* -------------------------------------- */
+header{
+    width: 83.33333%;
+    margin-top: 4.0039%;
+    display: flex;
+    height: 38px;
+    margin-bottom: 3.515626%;
+}
+.Logo{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #BC436A;
+    width: 47.5%;
+    padding-top: 10px;
+}
+.headLinks{
+    display: flex;
+    justify-content: flex-end;
+    width: 52.5%;
+}
+.HeadLinks40{
+    text-decoration: none;
+    margin-right: 2.77778%;
+    color: #776677;
+    font-size: 16px;
+    padding-top: 11px;
+}
+.HeadLinks40.Home{
+    color: #BC436A;
+}
+.headButton{
+    padding: 8px;
+    color: #fff;
+    background-color: #386E41;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+}
+/* -------------------------------------- */
+/* ----------------MAIN------------------ */
+/* -------------------------------------- */
+main{
+    width: 83.33333%;
+}
+.MainText{
+    margin-top: 15.23438%;
+}
+.MainArticle{
+    font-weight: 800;
+    font-size: 36px;
+    color: #333333;
+
+}
+.highlight{
+    color: #BC436A;
+}
+.MainParagraph{
+    margin-top: 2.246094%;
+    font-size: 18px;
+    color: #7A7A7A;
+    margin-bottom: 22.36328%;
+}
+.MainLinks{
+    text-decoration: none;
+    color: #767676;
+    font-size: 18px;
+}
+.MainLinks::after{
+    content: url("../IMG/chevron-right.png");
+    position: relative ;
+    left: 1.66667%;
+    top: 8px;
+}
+.blockAbout{
+    margin-top: 3.222656%;
+    height: 9.765625%;
+    /* width: 83.33333%;  */
+    background-color: #386E41;
+    /* padding-top: 30px; */
+    padding-top: 2.929688%;
+    /* padding-bottom: 29px; */
+    padding-bottom: 2.832031%;
+    /* padding-left: 38px; */
+    padding-left: 2.638889%;
+    border: none;
+    border-radius: 8px;
+}
+input{
+    /* display: inline-block; */
+    background-color: #386E41;
+    padding-left: 20px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    /* margin-right: 75px; */
+    margin-right: 5.208333%;
+    background-image: url(../IMG/chevron-down.png);
+    background-repeat: no-repeat;
+    background-position: right 10px top 2px;
+}
+/* --------PLACEHOLDER-------------------*/
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ffffff;
+    font-size: 18px;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+    color: #ffffff;
+    font-size: 18px;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+    color: #ffffff;
+    font-size: 18px;
+}
+input:-moz-placeholder { /* Firefox 18- */
+    color: #ffffff;
+    font-size: 18px;
+}
+/* --------------------------------- */
+.searchButton{
+    border:none;
+    border-radius: 4px;
+    background-color: #BC436A;
+    font-family: 'Avenir', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 21px;
+    margin-right: 2.398889%;
+}
+/* -------------------------------------- */
+/* ----------------Footer---------------- */
+/* -------------------------------------- */
+footer{
+    margin-top: 7.03125%;
+    padding-bottom: 4.003906%;
+    text-align: center;
+    font-size: 18px;
+    color: #767676;
+}
