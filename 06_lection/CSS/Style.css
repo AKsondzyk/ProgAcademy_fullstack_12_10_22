@@ -76,16 +76,32 @@ main{
     color: #7A7A7A;
     margin-bottom: 22.36328%;
 }
-.MainLinks{
+.MainLinksWithAfter{
     text-decoration: none;
     color: #767676;
     font-size: 18px;
 }
-.MainLinks::after{
+/* -------old after------------- */
+/* .MainLinks::after{
     content: url("../IMG/chevron-right.png");
     position: relative ;
     left: 1.66667%;
     top: 8px;
+} */
+/* ----------New after---------- */
+.MainLinksWithAfter::after{
+    content: '' ;
+    display: inline-block;
+    width: 8.5px;
+    height: 8.5px;
+    /* border: 2px solid black; */
+    border-right: 2px solid #776677;
+    border-bottom: 2px solid #776677 ;
+    position: relative ;
+    left: 1.66667%;
+    top: 1px;
+    transform:rotate(-45deg);
+    
 }
 .blockAbout{
     margin-top: 3.222656%;
