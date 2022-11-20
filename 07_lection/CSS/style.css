@@ -10,6 +10,7 @@ a{
     background-image: url("../IMG/Background_Header.png");
     background-size:cover;
     height: 1788px;
+    /* background: linear-gradient(90deg, rgba(255,179,0,1) 4%, rgba(0,0,0,1) 54%); */
 }
 /* --------------------- */
 /* ----HEADER----------- */
@@ -163,8 +164,9 @@ a{
 /* ---------Second---PAGE--------- */
 /* ------------------------------- */
 .BlackBackground{
-    padding-top: 230px;
+    /* padding-top: 230px; */
     background-color: black;
+    background: linear-gradient(180deg, rgba(255,179,0,1) 0%, rgba(0,0,0,1) 17%);
 }
 .SecondPageWrapper{
     width: 76%;
@@ -173,6 +175,8 @@ a{
 .EastNusa{
     display: flex;
     justify-content: space-between;
+    position: relative;
+    top: -144px;
 }  
 .EastNusaIMG{
     padding-right: 10%;
@@ -530,3 +534,43 @@ a{
 /* ----------------------------- */
 /* --------MEDIA 900px---------- */
 /* ----------------------------- */
+@media (min-width:901px){
+    .gamburger{
+        display: none;
+    }
+}
+@media (max-width:901px){
+    .HeaderLinks{
+        display: none;
+    }
+    .gamburger{
+        align-self: flex-end;
+    }
+    .EastNusaMAINText{
+        font-size: 16px;
+    }
+    .CultureOrange::before{
+       width: 1%;
+    }
+    .cultureMAIN{
+        font-size: 16px;
+    }
+}
+/* -------------Ipad mini------- */
+@media (max-width:769px){
+    .HeaderLinks{
+        display: none;
+    }
+    .gamburger{
+        align-self: flex-end;
+    }
+    .Main-wrapper{
+        height: 1024px;
+    }
+    .backgroundIMG{
+        height: 1024px;
+    }
+    .Bromo{
+        margin-top: 20px;
+    }
+}
