@@ -6,11 +6,25 @@ a{
     text-decoration: none;
     outline-style: none; 
 }
+body{
+    margin: 0 auto;
+}
 .backgroundIMG{
     background-image: url("../IMG/Background_Header.png");
     background-size:cover;
     height: 1788px;
-    /* background: linear-gradient(90deg, rgba(255,179,0,1) 4%, rgba(0,0,0,1) 54%); */
+    position: relative;
+    /* -webkit-background-size: cover; */
+}
+.backgroundIMG::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 87%, rgba(0,0,0,1) 20%);
+    opacity: 13%;
 }
 /* --------------------- */
 /* ----HEADER----------- */
@@ -74,7 +88,7 @@ a{
     height: 50px;
     border: 2px solid #fff;
     border-radius: 50%;
-    position: relative;
+    /* position: relative; */
     right: 208px;
     top: -13px;
 }
@@ -164,9 +178,7 @@ a{
 /* ---------Second---PAGE--------- */
 /* ------------------------------- */
 .BlackBackground{
-    /* padding-top: 230px; */
     background-color: black;
-    background: linear-gradient(180deg, rgba(255,179,0,1) 0%, rgba(0,0,0,1) 17%);
 }
 .SecondPageWrapper{
     width: 76%;
@@ -568,9 +580,23 @@ a{
         height: 1024px;
     }
     .backgroundIMG{
-        height: 1024px;
+        /* height: 1024px; */
     }
     .Bromo{
         margin-top: 20px;
+    }
+
+    .footerColumn{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .column-header{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .menu-item{
+        padding-top: 45px;
+        font-weight: 300;
+        font-size: 16px;
     }
 }
