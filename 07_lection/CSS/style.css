@@ -579,13 +579,12 @@ body{
     .Main-wrapper{
         height: 1024px;
     }
-    .backgroundIMG{
-        /* height: 1024px; */
-    }
+    /* .backgroundIMG{
+        height: 1024px; 
+    } */
     .Bromo{
         margin-top: 20px;
     }
-
     .footerColumn{
         justify-content: space-between;
         width: 100%;
@@ -598,5 +597,132 @@ body{
         padding-top: 45px;
         font-weight: 300;
         font-size: 16px;
+    }
+    .footer-subscribe {
+        padding: 0px;
+        width: 65%;
+    }
+    .footer-arrow {
+        width: 45px;
+        padding: 14px;
+    }
+}
+/* -------------Mobile and less------- */
+@media (max-width:773px){
+    .OrangeText{
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+    .OrangeText::before{
+        width: 30px;
+        position: relative ;
+        top: -3px;
+    }
+    .DiscoverText{
+        font-size: 40px;
+    }
+    .DiscoverText span{
+        font-weight: 600;
+        font-size: 40px;
+    }
+    .EastNusaOrangeText{
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+    .EastNusaOrangeText{
+        width: 10px;
+    }
+    .EastNusaSecondText{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .read-more{
+        font-size: 10px;
+    }
+    .SteadyMAIN{
+        font-size: 30px;
+    }
+    .bromoOrange::before{
+        width: 10px;
+    }
+    .bromoOrange::after{
+        width: 10px;
+    }
+    .SteadyText{
+    line-height: 12px;
+    font-weight: 600;
+    font-size: 10px;
+    }
+    .CultureOrange{
+        letter-spacing: 1px;
+        font-size: 10px;
+    }
+    .culturePARAGRAPH{
+        line-height: 12px;
+        font-weight: 600;
+        font-size: 10px;
+    }
+    .footerLogoText{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 10px;
+        writing-mode: vertical-lr;
+        padding-right: 10px;
+    }
+}
+/* ------------Footer-------- */
+@media (max-width:1010px){
+    .questionText{
+        padding-right: 40px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 18px;
+    }
+    .questionButton>button{
+    border-radius: 8px;
+    padding: 5px 20px;
+    }
+    .subscribe-form{
+        font-size: 15px;
+        line-height: 22px;
+        width: 35%;
+        padding-right: 5%;
+    }
+   .footer-arrow{
+    width: 50px;
+    padding: 14px;
+    }
+    .footer-subscribe{
+    padding: 0px;
+    width: 80%;
+    }
+}
+@media (max-width:635px){
+    .footer-subscribe {
+        padding: 0px;
+        width: 55%;
+    }
+    .column-header {
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .menu-item {
+        padding-top: 20px;
+        font-weight: 300;
+        font-size: 10px;
+    }
+    .pp-column a {
+        padding-right: 10px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .footerLINKS a {
+        padding-left: 10px;
+    }
+}
+@media (max-width:413px){
+    .privacyPolicy {
+    flex-direction: column;
     }
 }
