@@ -544,6 +544,67 @@ body{
     opacity: 0.6;
   }
 /* ----------------------------- */
+/* --------MEDIA 1085px---------- */
+/* ----------------------------- */
+@media (max-width:1085px){
+    .footer-subscribe {
+        padding: 10px;
+    }
+    .CultureOrange::before {
+        width: 20px;
+    }
+}
+/* ----------------------------- */
+/* --------MEDIA 980px---------- */
+/* ----------------------------- */
+@media (max-width:980px){
+    .footer-arrow {
+        width: 50px;
+        padding: 14px;
+    }
+    .subscribe-form>form {
+        width: 120%;
+        padding-top: 50px;
+    }
+}
+/* ----------------------------- */
+/* --------MEDIA 940px---------- */
+/* ----------------------------- */
+@media (max-width:940px){
+    .EastNusaOrangeText {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .EastNusaOrangeText::before {
+        width: 15px;
+    }
+    .EastNusaMAINText {
+        FONT-WEIGHT: 700;
+        font-size: 35px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .BromoText {
+        width: 90%;
+        padding: 2%;
+    }
+    .SteadyMAIN {
+        font-size: 35px;
+    }
+    .CultureOrange {
+        letter-spacing: 3px;
+    }
+    .CultureOrange::before {
+        width: 10px;
+    }
+    .cultureMAIN {
+        font-size: 35px;
+    }
+    .subscribe-form {
+        padding-right: 1%;
+    }
+}
+/* ----------------------------- */
 /* --------MEDIA 900px---------- */
 /* ----------------------------- */
 @media (min-width:901px){
@@ -558,171 +619,277 @@ body{
     .gamburger{
         align-self: flex-end;
     }
-    .EastNusaMAINText{
-        font-size: 16px;
+    .MAinPAge {
+        column-gap: 17.6%;
     }
-    .CultureOrange::before{
-       width: 1%;
-    }
-    .cultureMAIN{
-        font-size: 16px;
-    }
-}
-/* -------------Ipad mini------- */
-@media (max-width:769px){
-    .HeaderLinks{
-        display: none;
-    }
-    .gamburger{
-        align-self: flex-end;
-    }
-    .Main-wrapper{
-        height: 1024px;
-    }
-    /* .backgroundIMG{
-        height: 1024px; 
-    } */
-    .Bromo{
-        margin-top: 20px;
-    }
-    .footerColumn{
-        justify-content: space-between;
-        width: 100%;
-    }
-    .column-header{
-        font-weight: 700;
-        font-size: 20px;
-    }
-    .menu-item{
-        padding-top: 45px;
-        font-weight: 300;
-        font-size: 16px;
-    }
-    .footer-subscribe {
-        padding: 0px;
-        width: 65%;
-    }
-    .footer-arrow {
-        width: 45px;
-        padding: 14px;
-    }
-}
-/* -------------Mobile and less------- */
-@media (max-width:773px){
-    .OrangeText{
-        letter-spacing: 1px;
-        font-size: 10px;
-    }
-    .OrangeText::before{
+    .OrangeText::before {
         width: 30px;
-        position: relative ;
-        top: -3px;
     }
-    .DiscoverText{
+    .DiscoverText span {
+        font-size: 50px;
+    }
+    .DiscoverText {
+        margin-top: 10px;
         font-size: 40px;
     }
-    .DiscoverText span{
-        font-weight: 600;
-        font-size: 40px;
+    .read-more {
+        font-size: 12px;
     }
-    .EastNusaOrangeText{
-        letter-spacing: 1px;
-        font-size: 10px;
+    .footerLogoText {
+    font-size: 40px;
     }
-    .EastNusaOrangeText{
-        width: 10px;
+    .questionButton>button {
+    padding: 24px 30px;
     }
-    .EastNusaSecondText{
-        font-size: 10px;
-        line-height: 12px;
-    }
-    .read-more{
-        font-size: 10px;
-    }
-    .SteadyMAIN{
-        font-size: 30px;
-    }
-    .bromoOrange::before{
-        width: 10px;
-    }
-    .bromoOrange::after{
-        width: 10px;
-    }
-    .SteadyText{
-    line-height: 12px;
-    font-weight: 600;
-    font-size: 10px;
-    }
-    .CultureOrange{
-        letter-spacing: 1px;
-        font-size: 10px;
-    }
-    .culturePARAGRAPH{
-        line-height: 12px;
-        font-weight: 600;
-        font-size: 10px;
-    }
-    .footerLogoText{
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 10px;
-        writing-mode: vertical-lr;
-        padding-right: 10px;
-    }
-}
-/* ------------Footer-------- */
-@media (max-width:1010px){
-    .questionText{
-        padding-right: 40px;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 18px;
-    }
-    .questionButton>button{
-    border-radius: 8px;
-    padding: 5px 20px;
-    }
-    .subscribe-form{
-        font-size: 15px;
-        line-height: 22px;
-        width: 35%;
-        padding-right: 5%;
-    }
-   .footer-arrow{
-    width: 50px;
-    padding: 14px;
-    }
-    .footer-subscribe{
-    padding: 0px;
-    width: 80%;
-    }
-}
-@media (max-width:635px){
-    .footer-subscribe {
-        padding: 0px;
-        width: 55%;
+    .subscribe-form {
+        font-size: 26px;
+        line-height: 35px;
     }
     .column-header {
-        font-weight: 600;
-        font-size: 15px;
+        font-size: 17px;
+        line-height: 0px;
     }
     .menu-item {
-        padding-top: 20px;
-        font-weight: 300;
+        padding-top: 25px;
+        font-size: 12px;
+    }
+}
+/* ----------------------------- */
+/* --------MEDIA 830px---------- */
+/* ----------------------------- */
+@media (max-width:830px){
+    .backgroundIMG {
+    height: 1000px;
+    }
+    .Main-wrapper {
+        height: 880px;
+    }
+    .EastNusaOrangeText {
         font-size: 10px;
+        letter-spacing: 1px;
+    }
+    .EastNusaOrangeText::before {
+        width: 12px;
+        border: 1px solid #FFC178;
+        top: -3px;
+    }
+    .EastNusaMAINText {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .EastNusaSecondText {
+        margin-bottom: 27px;
+        line-height: 20px;
+        font-size: 16px;
+        font-weight: 400
+    }
+    .bromoOrange {
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+    .bromoOrange::before {
+        width: 30px;
+        left: -30%;
+        top: 9px;
+    }
+    .bromoOrange::after {
+        width: 30px;
+        right: -30%;
+        top: 9px;
+    }
+    .SteadyWrapper {
+        margin: 20px 0 20px;
+    }
+    .SteadyMAIN {
+        font-size: 20px;
+    }
+    .SteadyText {
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .cultureMAIN {
+        font-size: 20px;
+    }
+    .CultureOrange {
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    .CultureOrange::before {
+        width: 10px;
+        border: 1px solid #FFC178;
+        top: 7px;
+    }
+    .culturePARAGRAPH {
+        margin-bottom: 20px;
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .CultureText {
+        width: 50%;
+        padding-left: 1%;
+    }
+}
+/* ----------------------------- */
+/* --------MEDIA 670px---------- */
+/* ----------------------------- */
+@media (max-width:830px){
+    .Culture {
+        align-items: center;
+        column-gap: 10px;
+    }
+    .cultureIMG>img {
+        width: 90%;
+    }
+    .footerLogoText {
+        font-size: 30px;
+    }
+    .question {
+        column-gap: 2px;
+    }
+    .questionText {
+        padding-right: 15px;
+        font-size: 20px;
+        line-height: 15px;
+    }
+    .questionButton>button {
+        padding: 13px 13px;
+    }
+    .subscribe-form {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .footerLINKS a {
+        padding-left: 20px;
+    }
+}
+/* ----------------------------- */
+/* --------MEDIA 600px---------- */
+/* ----------------------------- */
+@media (max-width:600px){
+    .EastNusa {
+        flex-direction: column;
+    }
+    .EastNusaIMG {
+        padding-right: 0%;
+        width: 100%;
+    }
+    .EastNusaText {
+        width: 90%;
+    }
+    .Culture {
+        column-gap: 0px;
+        flex-direction: column-reverse;
+    }
+    .cultureIMG>img {
+        width: 100%;
+    }
+    .CultureText {
+        width: 90%;
+        padding-left: 0%;
+    }
+    .subscribe {
+        flex-direction: column;
+        align-items: center;
+    }
+    .questionText {
+        font-size: 15px;
+    }
+    .subscribe-form>form {
+        width: 100%;
+    }
+    .footer-subscribe {
+        width: 70%;
+    }
+    .footer-arrow {
+        width: 20%;
+        padding: 12px;
     }
     .pp-column a {
-        padding-right: 10px;
-        font-weight: 400;
-        font-size: 15px;
+        padding-right: 10%;
+        font-size: 14px;
         line-height: 20px;
     }
     .footerLINKS a {
-        padding-left: 10px;
+        padding-left: 5%;
     }
 }
-@media (max-width:413px){
+/* ----------------------------- */
+/* --------MEDIA 460px---------- */
+/* ----------------------------- */
+@media (max-width:460px){
+    .OrangeText {
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .DiscoverText {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    .bromoOrange::before {
+        width: 20px;
+        left: -5%;
+        top: 6px;
+    }
+    .bromoOrange::after {
+        width: 20px;
+        right: -5%;
+        top: 6px;
+    }
+    .footerLogoText {
+        font-size: 20px;
+    }
+    .questionButton>button {
+        padding: 10px 10px;
+    }
+}
+/* ----------------------------- */
+/* --------MEDIA 400px---------- */
+/* ----------------------------- */
+@media (max-width:400px){
+    .footerLogo {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerColumn {
+        width: 100%;
+    }
     .privacyPolicy {
-    flex-direction: column;
+        margin-bottom: 100px;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+    .pp-column {
+        width: 100%;
+    }
+}
+/* ----------------------------- */
+/* --------MEDIA 300px---------- */
+/* ----------------------------- */
+@media (max-width:300px){
+    .OrangeText {
+        font-size: 10px;
+    }
+    .OrangeText::before {
+        width: 10px;
+    }
+    .DiscoverText {
+        font-size: 20px;
+    }
+    .DiscoverText span {
+        font-size: 30px;
+    }
+    .column-header {
+        font-size: 13px;
+    }
+    .menu-item {
+        font-size: 9px;
     }
 }
