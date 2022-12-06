@@ -138,7 +138,7 @@ header{
 //         }    
 //     }
 .basket{
-    width: 10%;
+    width: 11%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -216,6 +216,7 @@ header{
         h2{
             @include titleBlack();
             margin-bottom: 36px;
+            margin-top: 0px;
         }
         img{
             padding-bottom: 43px;
@@ -259,10 +260,11 @@ header{
     text-align: center;
     .catalogALIGH{
         padding-top: 53px;
-        padding-bottom: 67px;
+        padding-bottom: 141px;
 //         padding: 3.5rem 0 8vh;
         h2{
             @include titleWhite;
+            margin-top: 0px;
         }
         .catalogCONTER{
             margin-bottom: 73px;
@@ -324,73 +326,83 @@ header{
             font-size: 2.0rem;
             margin-bottom: 9px;
         }
-        .catalog-product-img{
+        .BreadImg{
             width: 100%;
-            object-fit: contain;
+            // object-fit: contain;
         }
-//         .catalog-product-text{
+        .BreadText{
 //             padding: 20px 0 13px;
-//             vertical-align: middle;
-//             font-size: 1.7rem;
-//         }
-//         .price-container{
-//             display: flex;
-//             justify-content: space-between;
-//             align-items: center;
-//             .price-container-image{
+            // vertical-align: middle;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .BreadPrice{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+//             .BreadPriceImage{
 //                 @media screen and (max-width: 1000px){
 //                     width: 50%;
 //                 }
-//             }
-//             .price-button{
-//                 background-color: $price-orange;
-//                 padding: $button-price-padding;
-//                 border: none;
-//                 font-weight: 400;
-//                 font-size: 1.7rem;
+        }
+            .BreadPriceButton{
+                background-color: $buttonOrange;
+                border: none;
+                padding-top: 9px;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-bottom: 9px;
+                font-weight: 400;
+                font-size: 1.5rem;
 //                 &:hover{
 //                     color: #f87b0d;
 //                 }
 //             }
-//         }
+            }
     }    
 }
-// .about{
-//     background-image: url(../img/background2.png);
-//     background-position: right 15px bottom 225px;
-    
-//     .benefits-wrapper{
+// ------------------------------------------------------
+.aboutUs{
+    background-image: url(../img/background2.png);
+    background-position: right -179px bottom 215px;
+    .AboutUsAlign{
 //         padding: 4rem 18.7rem 4.9rem;
-//         margin: 0 auto;
-//         text-align: center;
-//         h2{
-//             @include title-black;
-//             margin-bottom: 36px;
-//         }
+        margin: 0 auto;
+        text-align: center;
+        h2{
+            @include titleBlack();
+            padding-top: 44px;
+            padding-bottom: 36px;
+            margin: 0 auto;
+        }
 //         img{
 //             @include header-arrow;
 //         }
-//         .about-text{
-//             font-weight: 400;
-//             font-size: 20px;   
-//         }
-//         .first-paragraph{
-//             margin-bottom: 10px;
-//         }
-//         .autograph{
-//             text-align: right;
+        .aboutUsText{
+            font-weight: 400;
+            font-size: 2rem;   
+        }
+        .MAinParagraph{
+            margin-bottom: 2.2rem;
+        }
+        .SignaParagpaph{
+            text-align: right;
+            padding-bottom: 76px;
 //             margin-top: 22px;
-//         }
-//     }       
-// }
-// .gallery{
-//     @extend .catalog;
+        }
+    }       
+}
+// ---------------------------------------------------
+.Production{
+    @extend .catalog;
 //     padding: 4.9rem 0 5.4rem;
-//     h2{
-//         @include title-white;
-//         margin-bottom: 3.3vw;
-//     }
-// }
+    h2{
+        @include titleWhite;
+        padding-top: 73px;
+        margin-bottom: 65px;
+        margin-top: 0px;
+    }
+}
 // .images-container{
 //     margin: 0 auto;
 //     height: 435px;

@@ -6,6 +6,6 @@ document.write('User name: ' + FirsName + '<br>' + ' User last name: ' + SecondN
 // ----------------------------------------------------------
 
 let LANG = (prompt('Введіть бажану мову "uk" або "ru"').toLowerCase());
-let RightLang = uk;
+let RightLang = "uk";
 
 console.log('Чи вибрано мову uk?', LANG === RightLang);
