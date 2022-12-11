@@ -1,0 +1,879 @@
+$Orange: #ff9900;
+$Black: #000;
+$White: #ffff;
+$BackqroundWhite: #F6FDEE;
+$Yelow: #FFE600;
+// $thirdbg: #f6fdee;
+
+@mixin ButtonRight{
+    color: $Black;
+    font-size: 2.4rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    border-bottom: 5px solid $Yelow;
+    // display: flex;
+    // justify-content: flex-end;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Philosopher';
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+html{
+    font-size: 10px;
+}
+
+.MainBackground{
+    background-image: url(../img/banner\ 1.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .Logo{
+        font-size: 4rem;
+        font-weight: 400;
+        color: $White;
+    }
+        .LogoSpan{
+            color: $Orange;
+            font-size: 4rem;
+            font-weight: 400;
+        }
+    .HeaderLinks{
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.4rem;
+        font-weight: 400;
+        column-gap: 2.5%;
+        a{
+            color: $White;
+            &:hover{
+                color: #ff9900;
+            }
+        }
+    }
+    .TakeTour{
+        font-size: 2.4rem;
+        font-weight: 700;
+        a{
+            color: $Orange;
+            &:hover{
+                color: $White;
+            }
+    
+        }
+    }
+    .gamburger{
+        display: none;
+//     padding: 9px;
+//     flex-direction: column;
+//     display: none;
+//     height: 45px;
+//     width: 45px;
+//     border-radius: 50%;
+//     border: 3px solid white;
+//     justify-content: space-around;
+//     align-items: center;  
+// .gamburger-dekoration{
+//     margin: 0;
+//     padding: 0;
+//     border: 1px solid #ffff;
+//     width: 25px;
+// }
+    }
+}
+// -----------------------------------------------
+
+.MainText{
+    display: flex;
+    justify-content: center;
+    padding-top: 30.2rem;
+    padding-bottom: 36rem;
+    padding-left: 18.2%;
+    padding-right: 15.8%;
+    color: $White;
+    .MainArticle{
+        font-size: 8rem;
+        font-weight: 400;
+        text-align: right;
+            .OrangeArticle{
+                color: $Orange;
+             }
+    }
+    .MainParagraph{
+        padding-left: 18.2rem;
+        padding-top: 17px;
+        font-size: 3.4rem;
+        font-weight: 400;
+        p{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        }
+        .WhoSay{
+            color: $Orange;
+            text-align: right;
+        }
+    }
+}
+// ---------------------------------------
+
+.StoryPartBackground{
+    background-color: $BackqroundWhite;
+}
+
+.StoryPart{
+    width: 90%;
+    margin: 0 auto;
+    .StoryArticle{
+       text-align: left;
+       padding-top: 12rem;
+       font-size: 4rem;
+       font-weight: 700;
+       color: $Black;
+       padding-bottom: 7rem;
+       .OrangeStory{
+            color: $Orange;
+       }
+    }
+}
+
+.FirstGridConter{
+    display: grid;
+    // grid-template-columns: repeat(3, minmax(min-content, max-content));
+    // grid-template-rows: 120px 250px 120px 320px;
+    // grid-template-columns: 30% 30% 30%;
+    grid-template-columns: repeat(3);
+    column-gap: 6.6rem;
+    row-gap: 2.8rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .StoryText{
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $Black;
+    }
+    .StoryOrange{
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $Orange;
+        padding-bottom: 2rem;
+    }
+    .LeftTop{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .LeftMidle{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .LeftBottom{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .CenterTop{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: center;
+    }
+    .CenterBottom{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 5;
+    }
+    .RightTop{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .RightMidle{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .RightBottom{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+}
+
+.ReadMore{
+    text-align: right;
+    padding-top: 3.5rem;
+    padding-bottom: 13.1rem;
+    margin: 0px;
+    .ReadMoreButton{
+        @include ButtonRight;
+            &:hover{
+                color: $Orange;
+            }
+    }
+}
+// ----------------------------------------------
+
+.OurCollectionPart{
+    // padding-bottom: 18.4rem;
+    .FirstLine{
+        border: 5px solid $Orange;
+        position: relative;
+        top: 26.575rem;
+        z-index: 0;
+    }
+    .SecondLine{
+        border: 5px solid $Orange;
+        position: relative;
+        top: 67.5rem;
+        z-index: 0;
+    }
+    .CollectionWrapper{
+        width: 90%;
+        margin: 0 auto;
+        .ColectionArticle{
+            text-align: left;
+            padding-top: 12rem;
+            font-size: 4rem;
+            font-weight: 700;
+            color: $Black;
+            padding-bottom: 5rem;
+            .OrangeCollection{
+                color: $Orange;
+            }
+        }
+    }
+}
+
+.SecondGridConter {
+    display: grid;
+    grid-template-columns: repeat(4);
+    column-gap: 6.6rem;
+    .London {
+        background-image: url(../img/hotel1\ 1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .Dubai {
+        background-image: url(../img/hotel3\ 1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .Paries {
+        background-image: url(../img/hotel4\ 1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .NewYork {
+        background-image: url(../img/hotel5\ 1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+}
+
+.city{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $White;
+    width: 10.4rem;
+    border-bottom: 5px solid $Yelow;
+    padding-top: 29.7rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    &:hover{
+        color: $Orange;
+    }
+}
+
+.cityDescribe{
+    margin-left: 2rem;
+    margin-right: 3.6rem;
+    color: $White;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-bottom: 7rem;
+}
+// -------------------------------------------------
+
+
+
+
+
+
+// .vinh{
+//     background-image: url(../img/—Pngtree—south\ korea\ jinxian\ ink\ hills_6690513\ 1.png);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-attachment: fixed;
+//     padding-bottom: 25rem;
+//     .hour{
+//         width: 90%;
+//         margin: 0 auto;
+//     }
+// }
+// .clickw{
+//     background-color: #0000;
+//     border: none;
+//     border-bottom: 5px solid #ffe600;
+//     font-size: 2.4rem;
+//     font-weight: 700;
+// }
+// .deregabl{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     padding: 3rem 11rem 0rem 11rem;
+// }
+// .stom{
+//     font-size: 4rem;
+//     font-weight: 700;
+//     color: rgba(0, 0, 0, 1);
+//     padding-bottom: 2rem;
+//     padding-top: 3rem;
+// }
+// .stor{
+//     font-size: 4rem;
+//     font-weight: 700;
+//     color: $secondfont;
+// }
+// .drtext{
+//     font-size: 1.8rem;
+//     font-weight: 400;
+//     color: $thirdfont;
+// }
+// .service{
+//     padding-bottom: 11rem;
+// }
+// .wrapper{
+//     width: 90%;
+//     margin: 0 auto;
+// }
+// .foto{
+//     display: grid;
+//     grid-template-columns: repeat(7, auto);
+//     grid-template-rows: 328px 61px 140px 192px;
+//     row-gap: 2rem;
+//     column-gap: 2rem;
+//     img{
+//         width: 100%;
+//         height: 100%;
+//     }
+// }
+// .tarelki{
+//     grid-column: 1/3;
+//     z-index: 1;
+// }
+// .party{
+//     grid-column: 1/2;
+//     grid-row: 2/4;
+//     z-index: 1;
+// }
+// .resepsion{
+//     grid-column: 2/3;
+//     grid-row: 2/4;
+//     z-index: 1;
+// }
+// .kastrulya{
+//     grid-column: 1/3;
+//     grid-row: 4/5;
+//     z-index: 1;
+// }
+// .indian{
+//     grid-column: 3/5;
+//     grid-row: 1/5;
+//     z-index: 1;
+// }
+// .obed{
+//     grid-column: 5/8;
+//     grid-row: 1/3;
+//     z-index: 1;
+// }
+// .barmen{
+//     grid-row: 3/5;
+//     z-index: 1;
+// }
+// .povara{
+//     z-index: 1;
+// }
+// .shef{
+//     grid-column: 6/7;
+//     z-index: 1;
+// }
+// .off{
+//     grid-column: 7/8;
+//     grid-row: 3/5;
+//     z-index: 1;
+// }
+// .avards{
+//     background-color: $thirdbg;
+//     padding-bottom: 12rem;
+// }
+// .avard{
+//     display: grid;
+//     grid-template-columns: repeat(3, auto);
+//     grid-template-rows: 215px 70px 55px 300px;
+//     column-gap: 6rem;
+//     img{
+//         width: 100%;
+//         height: 100%;
+//     }
+// }
+// .ex{
+//     grid-row: 1/3;
+// }
+// .ital{
+//     grid-column: 1/2;
+//     grid-row: 4/5;
+// }
+// .men{
+//     grid-row: 1/5;
+// }
+// .time{
+//     grid-row: 2/5;
+// }
+// .footer{
+//     background-image: url(../img/—Pngtree—south\ korea\ jinxian\ ink\ hills_6690513\ 2.png);
+//     background-size: cover;
+//     background-attachment: local;
+// }
+// .line{
+//     border-top: 1px solid $thirdfont;
+//     padding-bottom: 4rem;
+// }
+// h4{
+//     font-size: 3rem;
+//     font-size: 400;
+//     color: $thirdfont;
+//     padding-bottom: 2.5rem; 
+// }
+// p{
+//     font-size: 2rem;
+//     font-weight: 400;
+//     color: $thirdfont;
+// }
+// .feed{
+//     font-size: 3rem;
+//     font-weight: 400;
+//     color: $thirdfont;
+//     border-bottom: 1px solid $thirdfont;
+//     label{
+//         font-size: 3rem;
+//         font-weight: 400;
+//         color: $thirdfont;
+//     }
+// }
+// input{
+//     border: none;
+//     background-color: rgba(0, 0, 0, 0);
+// }
+// .send{
+//     font-size: 4rem;
+//     font-weight: 700;
+//     color: $thirdfont;
+//     background-color: $linecolor;
+//     padding: 1rem 5rem;
+//     border: none;
+//     border-radius: 5px;
+// }
+// .stomi{
+//     font-size: 4rem;
+//     font-weight: 700;
+//     color: rgba(0, 0, 0, 1);
+// }
+// .stori{
+//     font-size: 4rem;
+//     font-weight: 700;
+//     color: $secondfont;
+// }
+// .contact{
+//     display: grid;
+//     grid-template-columns: repeat(4, 298px);
+//     grid-template-rows: 240px 240px 70px;
+//     column-gap: 6rem;
+//     padding-bottom: 9rem;
+// }
+// .cny{
+//     grid-column: 2/3;
+//     grid-row: 2/3;
+// }
+// .cdubai{
+//     grid-column: 3/4;
+//     grid-row: 1/2;
+// }
+// .cparis{
+//     grid-column: 4/5;
+//     grid-row: 1/2;
+// }
+// .forma{
+//     grid-column: 3/5;
+//     grid-row: 2/3;
+// }
+// .but{
+//     grid-column: 4/5;
+//     grid-row: 3/4;
+//     display: flex;
+//     justify-content: end;
+// }
+// .info{
+//     display: flex;
+//     justify-content: space-between;
+//     padding-bottom: 5rem;
+// }
+// @media (min-width: 831px) and (max-width: 1201px) {
+//     .hosptext{
+//         left: 40px;
+//     }
+//     .ctext{
+//         font-size: 1.3rem;
+//         margin-bottom: 2rem;
+//     }
+//     .vinh{
+//         background-attachment: scroll;
+//     }
+//     .deregabl{
+//         column-gap: 1rem;
+//         padding-right: 6rem;
+//         padding-left: 4rem;
+//     }
+//     .contact{
+//         grid-template-columns: repeat(4, 273px);
+//         column-gap: 0;
+//     }
+//     .stomi{
+//         font-size: 3rem;
+//     }
+//     .stori{
+//         font-size: 3rem;
+//     }
+//     h4{
+//         font-size: 2rem;
+//     }
+//     .feed{
+//         label{
+//             font-size: 2rem;
+//         }
+//     }
+//     .send{
+//         font-size: 3rem;
+//         padding: 0.5rem 4rem;
+//     }
+// }
+// @media (min-width: 450px) and (max-width: 830px) {
+//     header{
+//         width: 95%;
+//     }
+//     .logo{
+//         font-size: 3rem;
+//     }
+//     .first{
+//         font-size: 3rem;
+//     }
+//     .orange{
+//         padding-left: 0.5rem;
+//         padding-right: 0.5rem;
+//     }
+//     .linkm{
+//         padding-left: 0.5rem;
+//         padding-right: 0.5rem;
+//     }
+//     .vitage{
+//         flex-direction: column;
+//         padding-top: 18rem;
+//         padding-bottom: 15rem;
+//     }
+//     .hosp{
+//         text-align: center;
+//     }
+//     .hosptext{
+//         left: 0;
+//     }
+//     .text{
+//         text-align: center;
+//     }
+//     .isa{
+//         text-align: center;
+//         padding-top: 3rem;
+//     }
+//     .our{
+//         padding-bottom: 7rem;
+//     }
+//     .ourd{
+//         width: 95%;
+//     }
+//     .story{
+//         padding-top: 6rem;
+//     }
+//     .firstgrid{
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .distr{
+//         font-size: 4.4rem;
+//     }
+//     .dtext{
+//         font-size: 2.2rem;
+//     }
+//     .pas{
+//         text-align: center;
+//     }
+//     .world{
+//         text-align: center;
+//     }
+//     .collection{
+//         padding-bottom: 4rem;
+//     }
+//     .collect{
+//         width: 95%;
+//     }
+//     .lineup{
+//         display: none;
+//     }
+//     .linebottom{
+//         display: none;
+//     }
+//     .secondgrid{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 3rem;
+//     }
+//     .city{
+//         width: 18.4rem;
+//         padding-top: 52rem;
+//     }
+//     .ctext{
+//         font-size: 2.4rem;
+//         margin-top: 2rem;
+//         margin-left: 2rem;
+//         padding-bottom: 8rem;
+//     }
+//     .cityn{
+//         width: 21.5rem;
+//         padding-top: 52rem;
+//         .ct{
+//             font-size: 4.4rem;
+//         }
+//     }
+//     .vinh{
+//         background-attachment: scroll;
+//         padding-bottom: 5rem;
+//         .hour{
+//             width: 95%;
+//         }
+//     }
+//     .deregabl{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         padding: 0;
+//     }
+//     .dtext{
+//         width: 100%;
+//     }
+//     .service{
+//         padding-bottom: 7rem;
+//     }
+//     .foto{
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .avards{
+//         padding-bottom: 7rem;
+//     }
+//     .wrapper{
+//         width: 95%;
+//     }
+//     .avard{
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .contact{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 5rem;
+//     }
+//     h4{
+//         padding-bottom: 0.5rem;
+//     }
+// }
+// @media (max-width: 450px) {
+//     header{
+//         width: 95%;
+//         padding-top: 0.5rem;
+//     }
+//     .logo{
+//         font-size: 2rem;
+//     }
+//     .first{
+//         font-size: 2rem;
+//     }
+//     .menu{
+//         display: none;
+//     }
+//     .take{
+//         font-size: 1.8rem;
+//     }
+//     .mobile_menu{
+//         display: flex;
+//     }
+//     .vitage{
+//         flex-direction: column;
+//         padding-top: 10rem;
+//         padding-bottom: 6rem;
+//     }
+//     .hosp{
+//         font-size: 6rem;
+//         line-height: 25px;
+//         text-align: center;
+//         .second{
+//             font-size: 6rem;
+//             line-height: 68px;
+//         }
+//     }
+//     .hosptext{
+//         left: 0;
+//     }
+//     .text{
+//         font-size: 1.8rem;
+//         text-align: center;
+//     }
+//     .isa{
+//         font-size: 2rem;
+//         text-align: center;
+//     }
+//     .our{
+//         padding-bottom: 5rem;
+//         .ourd{
+//             width: 95%;
+//         }
+//     }
+//     .story{
+//         padding-top: 4rem;
+//     }
+//     .sto{
+//         padding-bottom: 4rem;
+//     }
+//     .firstgrid{
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .pas,
+//     .world{
+//         text-align: center;
+//     }
+//     .linebottom,
+//     .lineup{
+//         display: none;
+//     }
+//     .collect{
+//         width: 95%;
+//     }
+//     .secondgrid{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 2rem;
+//     }
+//     .ctext{
+//         margin-top: 2rem;
+//         margin-bottom: 0;
+//         margin-left: 2rem;
+//         padding-bottom: 8rem;
+//     }
+//     .collection{
+//         padding-bottom: 4rem;
+//     }
+//     .vinh{
+//         background-attachment: scroll;
+//         padding-bottom: 5rem;
+//         .hour{
+//             width: 95%;
+//         }
+//     }
+//     .deregabl{
+//         display: flex;
+//         flex-direction: column;
+//         padding: 0;
+//     }
+//     img{
+//         width: 100%;
+//     }
+//     .service{
+//         padding-bottom: 5rem;
+//     }
+//     .wrapper{
+//         width: 95%;
+//     }
+//     .foto{
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .avards{
+//         padding-bottom: 5rem;
+//     }
+//     .avard{
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .footer{
+//         background-attachment: scroll;
+//     }
+//     .contact{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 4rem;
+//     }
+//     .feed{
+//         font-size: 1rem;
+//     }
+//     .send{
+//         font-size: 2rem;
+//     }
+//     .info{
+//         flex-direction: column;
+//         align-items: center;
+//     }
+//     .right{
+//         text-align: center;
+//         padding-bottom: 2rem;
+//     }
+// }
