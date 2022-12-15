@@ -29,12 +29,25 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 html {
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
 
     @media screen and (max-width: 950px) {
         font-size: 8px;
+    }
+    @media screen and (max-width: 790px) {
+        font-size: 6px;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 5px;
+    }
+    @media screen and (max-width: 330px) {
+        font-size: 4px;
     }
 
     .MAINbackground {
@@ -60,6 +73,16 @@ header {
 
     .Logo {
         width: 24%;
+        img{
+            @media screen and (max-width: 600px) {
+                max-height: 50%;
+                margin-top: 6rem;
+            }
+            @media screen and (max-width: 455px) {
+                max-height: 40%;
+                margin-top: 7rem;
+            }
+        }
     }
 }
 
@@ -71,9 +94,9 @@ header {
         width: 60%;
     }
 
-    // @media screen and (max-width: 1000px) {
-    //     display: none;
-    // }  
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }  
     .HeaderLinksList {
         text-align: center;
         display: flex;
@@ -81,12 +104,7 @@ header {
         justify-content: space-between;
         font-weight: 400;
         row-gap: 10px;
-        // font-size: 15px;
         font-size: 1.5rem;
-
-        @media screen and (max-width: 1000px) {
-            display: none;
-        }
     }
 
     a {
@@ -119,14 +137,20 @@ header {
 
     @media screen and (max-width: 1000px) {
         display: flex;
-        align-self: flex-end;
+        align-items: center;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 6rem;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 790px) {
+        margin-top: 9rem;
     }
 
     .gamburgerLine {
         height: 2px;
-        width: 23px;
+        width: 2rem;
         background-color: #fff;
-        margin: 10px;
     }
 }
 
@@ -138,6 +162,13 @@ header {
 
     @media screen and (max-width: 1100px) {
         width: 15%;
+        justify-content: center;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 30%;
+    }
+    @media screen and (max-width: 391px) {
+        display: none;;
     }
 
     &Button {
@@ -171,6 +202,13 @@ header {
         font-size: 7.3rem;
         margin-top: 10.5vh;
         margin-bottom: 6vh;
+        @media screen and (max-width: 455px) {
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 4rem;
+            }
     }
 
     p {
@@ -191,6 +229,10 @@ header {
         font-weight: 500;
         border: none;
         margin-bottom: 28.93vh;
+        @media screen and (max-width: 600px) {
+            width: 30rem;
+            height: 8rem;
+        }
     }
 }
 
@@ -210,14 +252,16 @@ header {
             @include titleBlack();
             margin-bottom: 36px;
             margin-top: 0px;
+            @media screen and (max-width: 400px) {
+                font-size: 4rem;
+                }
         }
 
         img {
             padding-bottom: 43px;
-
-            @media screen and (max-width: 1000px) {
-                scale: 0.7;
-            }
+            @media screen and (max-width: 500px) {
+                padding-bottom: 10px;
+                }
         }
 
         .WhyWeBlock {
@@ -229,6 +273,11 @@ header {
             padding-left: 17.5%;
             padding-right: 17.5%;
             color: $buttonBlack;
+            img{
+                @media screen and (max-width: 500px) {
+                max-width: 50%;
+                }
+            }
         }
     }
 }
@@ -249,10 +298,16 @@ header {
         h2 {
             @include titleWhite;
             margin-top: 0px;
+            @media screen and (max-width: 400px) {
+                font-size: 4rem;
+                }
         }
 
         .catalogCONTER {
             margin-bottom: 73px;
+            @media screen and (max-width: 500px) {
+                margin-bottom:40px;
+            }
 
             .catalogList {
                 display: flex;
@@ -261,7 +316,7 @@ header {
                 column-gap: 0.75%;
 
                 @media screen and (max-width: 1200px) {
-                    row-gap: 0.75%;
+                    row-gap: 2rem;
                 }
             }
         }
@@ -291,6 +346,14 @@ header {
     padding-right: 17.8%;
     color: $buttonGray;
     gap: 5.2%;
+
+    @media screen and (max-width: 455px) {
+        padding-left: 1%;
+        padding-right: 1%;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
 
     .BreadWhite,
     .BreadDarnytskyi,
@@ -324,6 +387,11 @@ header {
             justify-content: space-between;
             align-items: center;
         }
+            .BreadPriceImage{
+                @media screen and (max-width: 750px) {
+                    width: 50%;;
+                }
+            }
 
         .BreadPriceButton {
             background-color: $buttonOrange;
@@ -334,6 +402,11 @@ header {
             padding-bottom: 9px;
             font-weight: 400;
             font-size: 1.5rem;
+            @media screen and (max-width: 600px) {
+                font-size: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
         }
     }
 }
@@ -352,12 +425,9 @@ header {
             padding-top: 44px;
             padding-bottom: 36px;
             margin: 0 auto;
-        }
-
-        img {
-            @media screen and (max-width: 1000px) {
-                scale: 0.7;
-            }
+            @media screen and (max-width: 400px) {
+                font-size: 4rem;
+                }
         }
 
         .aboutUsText {
@@ -385,6 +455,9 @@ header {
         padding-top: 73px;
         margin-bottom: 65px;
         margin-top: 0px;
+        @media screen and (max-width: 400px) {
+            font-size: 4rem;
+            }
 
         @media screen and (max-width: 1070px) {
             margin-bottom: 20px;
@@ -403,6 +476,16 @@ header {
         scale: 0.7;
         width: auto;
     }
+    @media screen and (max-width: 960px) {
+        flex-wrap: nowrap;
+        height: auto;
+        scale: 1;
+    }
+    img{
+        @media screen and (max-width: 391px) {
+            max-width: 70%;
+        }
+    }   
 }
 
 // --------------------------------------------------  
@@ -457,5 +540,11 @@ footer {
                 font-weight: 400;
             }
         }
+    }
+}
+// ------------Стрілки що ламають сторінку---------------
+.arrows{
+    @media screen and (max-width: 1030px) {
+        width: 65%;
     }
 }
