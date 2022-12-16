@@ -516,8 +516,7 @@ header{
 
 .AwardsGrid{
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    // grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
     column-gap: 12rem;
     img{
         width: 100%;
@@ -537,427 +536,151 @@ header{
     }
     .Midle{
         grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 4;
     }
     .RightTop{
-        grid-column-start: 4;
-        grid-column-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
     }
     .RightMidle{
-        grid-column-start: 4;
-        grid-column-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 4;
     }
 }
 // ------------------------------------------------------
 
-// .footer{
-//     background-image: url(../img/—Pngtree—south\ korea\ jinxian\ ink\ hills_6690513\ 2.png);
-//     background-size: cover;
-//     background-attachment: local;
-// }
-// .line{
-//     border-top: 1px solid $thirdfont;
-//     padding-bottom: 4rem;
-// }
-// h4{
-//     font-size: 3rem;
-//     font-size: 400;
-//     color: $thirdfont;
-//     padding-bottom: 2.5rem; 
-// }
-// p{
-//     font-size: 2rem;
-//     font-weight: 400;
-//     color: $thirdfont;
-// }
-// .feed{
-//     font-size: 3rem;
-//     font-weight: 400;
-//     color: $thirdfont;
-//     border-bottom: 1px solid $thirdfont;
-//     label{
-//         font-size: 3rem;
-//         font-weight: 400;
-//         color: $thirdfont;
-//     }
-// }
-// input{
-//     border: none;
-//     background-color: rgba(0, 0, 0, 0);
-// }
-// .send{
-//     font-size: 4rem;
-//     font-weight: 700;
-//     color: $thirdfont;
-//     background-color: $linecolor;
-//     padding: 1rem 5rem;
-//     border: none;
-//     border-radius: 5px;
-// }
-// .stomi{
-//     font-size: 4rem;
-//     font-weight: 700;
-//     color: rgba(0, 0, 0, 1);
-// }
-// .stori{
-//     font-size: 4rem;
-//     font-weight: 700;
-//     color: $secondfont;
-// }
-// .contact{
-//     display: grid;
-//     grid-template-columns: repeat(4, 298px);
+.ContactPart{
+    background-image: url(../img/—Pngtree—south\ korea\ jinxian\ ink\ hills_6690513\ 2.png);
+    background-size: cover;
+    background-attachment: local;
+    .ContactWrapper{
+        width: 90%;
+        margin: 0 auto;
+        .ContactArticle{
+            text-align: left;
+            padding-top: 12rem;
+            font-size: 4rem;
+            font-weight: 700;
+            color: $Black;
+            padding-bottom: 5rem;
+            .OrangeContact{
+                color: $Orange;
+            }
+        }
+    }
+}
+
+.ContactGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 298px);
 //     grid-template-rows: 240px 240px 70px;
-//     column-gap: 6rem;
+    column-gap: 6.7rem;
+    row-gap: 6.2rem;
 //     padding-bottom: 9rem;
-// }
-// .cny{
-//     grid-column: 2/3;
-//     grid-row: 2/3;
-// }
-// .cdubai{
-//     grid-column: 3/4;
-//     grid-row: 1/2;
-// }
-// .cparis{
-//     grid-column: 4/5;
-//     grid-row: 1/2;
-// }
-// .forma{
-//     grid-column: 3/5;
-//     grid-row: 2/3;
-// }
-// .but{
-//     grid-column: 4/5;
-//     grid-row: 3/4;
-//     display: flex;
-//     justify-content: end;
-// }
-// .info{
-//     display: flex;
-//     justify-content: space-between;
-//     padding-bottom: 5rem;
-// }
-// @media (min-width: 831px) and (max-width: 1201px) {
-//     .hosptext{
-//         left: 40px;
-//     }
-//     .ctext{
-//         font-size: 1.3rem;
-//         margin-bottom: 2rem;
-//     }
-//     .vinh{
-//         background-attachment: scroll;
-//     }
-//     .deregabl{
-//         column-gap: 1rem;
-//         padding-right: 6rem;
-//         padding-left: 4rem;
-//     }
-//     .contact{
-//         grid-template-columns: repeat(4, 273px);
-//         column-gap: 0;
-//     }
-//     .stomi{
-//         font-size: 3rem;
-//     }
-//     .stori{
-//         font-size: 3rem;
-//     }
-//     h4{
-//         font-size: 2rem;
-//     }
-//     .feed{
-//         label{
-//             font-size: 2rem;
-//         }
-//     }
-//     .send{
-//         font-size: 3rem;
-//         padding: 0.5rem 4rem;
-//     }
-// }
-// @media (min-width: 450px) and (max-width: 830px) {
-//     header{
-//         width: 95%;
-//     }
-//     .logo{
-//         font-size: 3rem;
-//     }
-//     .first{
-//         font-size: 3rem;
-//     }
-//     .orange{
-//         padding-left: 0.5rem;
-//         padding-right: 0.5rem;
-//     }
-//     .linkm{
-//         padding-left: 0.5rem;
-//         padding-right: 0.5rem;
-//     }
-//     .vitage{
-//         flex-direction: column;
-//         padding-top: 18rem;
-//         padding-bottom: 15rem;
-//     }
-//     .hosp{
-//         text-align: center;
-//     }
-//     .hosptext{
-//         left: 0;
-//     }
-//     .text{
-//         text-align: center;
-//     }
-//     .isa{
-//         text-align: center;
-//         padding-top: 3rem;
-//     }
-//     .our{
-//         padding-bottom: 7rem;
-//     }
-//     .ourd{
-//         width: 95%;
-//     }
-//     .story{
-//         padding-top: 6rem;
-//     }
-//     .firstgrid{
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     .distr{
-//         font-size: 4.4rem;
-//     }
-//     .dtext{
-//         font-size: 2.2rem;
-//     }
-//     .pas{
-//         text-align: center;
-//     }
-//     .world{
-//         text-align: center;
-//     }
-//     .collection{
-//         padding-bottom: 4rem;
-//     }
-//     .collect{
-//         width: 95%;
-//     }
-//     .lineup{
-//         display: none;
-//     }
-//     .linebottom{
-//         display: none;
-//     }
-//     .secondgrid{
-//         display: flex;
-//         flex-direction: column;
-//         gap: 3rem;
-//     }
-//     .city{
-//         width: 18.4rem;
-//         padding-top: 52rem;
-//     }
-//     .ctext{
-//         font-size: 2.4rem;
-//         margin-top: 2rem;
-//         margin-left: 2rem;
-//         padding-bottom: 8rem;
-//     }
-//     .cityn{
-//         width: 21.5rem;
-//         padding-top: 52rem;
-//         .ct{
-//             font-size: 4.4rem;
-//         }
-//     }
-//     .vinh{
-//         background-attachment: scroll;
-//         padding-bottom: 5rem;
-//         .hour{
-//             width: 95%;
-//         }
-//     }
-//     .deregabl{
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         padding: 0;
-//     }
-//     .dtext{
-//         width: 100%;
-//     }
-//     .service{
-//         padding-bottom: 7rem;
-//     }
-//     .foto{
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     .avards{
-//         padding-bottom: 7rem;
-//     }
-//     .wrapper{
-//         width: 95%;
-//     }
-//     .avard{
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     .contact{
-//         display: flex;
-//         flex-direction: column;
-//         gap: 5rem;
-//     }
-//     h4{
-//         padding-bottom: 0.5rem;
-//     }
-// }
-// @media (max-width: 450px) {
-//     header{
-//         width: 95%;
-//         padding-top: 0.5rem;
-//     }
-//     .logo{
-//         font-size: 2rem;
-//     }
-//     .first{
-//         font-size: 2rem;
-//     }
-//     .menu{
-//         display: none;
-//     }
-//     .take{
-//         font-size: 1.8rem;
-//     }
-//     .mobile_menu{
-//         display: flex;
-//     }
-//     .vitage{
-//         flex-direction: column;
-//         padding-top: 10rem;
-//         padding-bottom: 6rem;
-//     }
-//     .hosp{
-//         font-size: 6rem;
-//         line-height: 25px;
-//         text-align: center;
-//         .second{
-//             font-size: 6rem;
-//             line-height: 68px;
-//         }
-//     }
-//     .hosptext{
-//         left: 0;
-//     }
-//     .text{
-//         font-size: 1.8rem;
-//         text-align: center;
-//     }
-//     .isa{
-//         font-size: 2rem;
-//         text-align: center;
-//     }
-//     .our{
-//         padding-bottom: 5rem;
-//         .ourd{
-//             width: 95%;
-//         }
-//     }
-//     .story{
-//         padding-top: 4rem;
-//     }
-//     .sto{
-//         padding-bottom: 4rem;
-//     }
-//     .firstgrid{
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     .pas,
-//     .world{
-//         text-align: center;
-//     }
-//     .linebottom,
-//     .lineup{
-//         display: none;
-//     }
-//     .collect{
-//         width: 95%;
-//     }
-//     .secondgrid{
-//         display: flex;
-//         flex-direction: column;
-//         gap: 2rem;
-//     }
-//     .ctext{
-//         margin-top: 2rem;
-//         margin-bottom: 0;
-//         margin-left: 2rem;
-//         padding-bottom: 8rem;
-//     }
-//     .collection{
-//         padding-bottom: 4rem;
-//     }
-//     .vinh{
-//         background-attachment: scroll;
-//         padding-bottom: 5rem;
-//         .hour{
-//             width: 95%;
-//         }
-//     }
-//     .deregabl{
-//         display: flex;
-//         flex-direction: column;
-//         padding: 0;
-//     }
-//     img{
-//         width: 100%;
-//     }
-//     .service{
-//         padding-bottom: 5rem;
-//     }
-//     .wrapper{
-//         width: 95%;
-//     }
-//     .foto{
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     .avards{
-//         padding-bottom: 5rem;
-//     }
-//     .avard{
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     .footer{
-//         background-attachment: scroll;
-//     }
-//     .contact{
-//         display: flex;
-//         flex-direction: column;
-//         gap: 4rem;
-//     }
-//     .feed{
-//         font-size: 1rem;
-//     }
-//     .send{
-//         font-size: 2rem;
-//     }
-//     .info{
-//         flex-direction: column;
-//         align-items: center;
-//     }
-//     .right{
-//         text-align: center;
-//         padding-bottom: 2rem;
-//     }
-// }
+    .ContactArticleTwo{
+        text-align: left;
+        font-size: 4rem;
+        font-weight: 700;
+        color: $Black;
+        .OrangeContactTwo{
+            color: $Orange;
+        }
+    }
+    .LondonOfice,
+    .NYOfice,
+    .DubaiOfice,
+    .ParisOfice{
+        font-weight: 400;
+        font-size: 3rem;
+        color: $Black;
+        .OficeName{
+            font-weight: 700;
+            padding-bottom: 2rem;
+        }
+    }
+    .LondonOfice{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .NYOfice{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .DubaiOfice{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .ParisOfice{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .MailForma{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        .mailTo{
+            font-size: 3rem;
+            color: $Black;
+            font-weight: 700;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+
+.MailLine{
+    font-size: 3rem;
+    font-weight: 400;
+    color: $Black;
+    border-bottom: 1px solid $Black;
+        label{
+            font-size: 3rem;
+            font-weight: 400;
+        }
+        input{
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+        }
+}
+
+.SendButton{
+    display: flex;
+    justify-content: end;
+    margin-top: 3.8rem;
+    margin-bottom: 9rem;
+        .send{
+            font-size: 4rem;
+            font-weight: 700;
+            color: $Black;
+            background-color: $Orange;
+            border: none;
+            border-radius: 5px;
+            padding: 1.2rem 3.7rem 1.8rem 6.7rem;
+        }
+}
+.line{
+    border: 1px solid $Black;
+}
+.Info{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
