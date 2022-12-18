@@ -7,25 +7,25 @@ let SecondNumber = parseFloat(prompt('Введіть друге число дл�
 // ------------------------Calculator------------------------
 if (Operation == '+'){
     let SumaResult = FirstNumber + SecondNumber;
-    console.log('Сумма двох чисел = ', SumaResult);
+    console.log(`Сумма двох чисел:  ${SumaResult}`);
 }
 else if ( Operation == '-'){
     let DiffResult = FirstNumber - SecondNumber;
-    console.log('Різниця двох чисел', DiffResult);
+    console.log(`Різниця двох чисел: ${DiffResult}`);
 }
 else if ( Operation == '*'){
     let MultiplicationResult = FirstNumber * SecondNumber;
-    console.log('Добуток двох чисел', MultiplicationResult);
+    console.log(`Добуток двох чисел: ${MultiplicationResult}`);
 }
 else if ( Operation == '/' && SecondNumber !=0){
     let DelayResult = FirstNumber / SecondNumber;
-    console.log('Частка від першого числа', DelayResult);
+    console.log(`Ділення першого числа на друге: ${DelayResult}`);
 }
 else if ( Operation == '/' && SecondNumber == 0){
-    alert('Поки що на нуль ділити не можна!!!');
+    alert(`Поки що на нуль ділити не можна!!!`);
 }
 else {
-        console.log('Деякі з даних введено не вірно');
+        console.log(`Деякі з даних введено не вірно`);
 }
 // -----------------------------------------------------------
 

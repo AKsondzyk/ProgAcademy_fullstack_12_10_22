@@ -3,24 +3,12 @@
 // ------------------------------------------------------------
 let FigureWidht = parseInt(prompt('введіть ширину фігури',1));
 let FigureHeight = parseInt(prompt('введіть висоту фігури',1));
-let FigureROW = '';
-let  FigureColumn = '';
 
-for (x = 0; x < FigureWidht; x++) {
-   FigureROW = FigureROW + '*';
-   for (y = 0; y < FigureHeight; y++) {
-    FigureColumn += FigureROW ;
-//     FigureColumn = FigureColumn + '*';
-    // console.log(FigureColumn);
-    console.log(FigureColumn);
+for (let y = 0; y<FigureHeight; y++) {
+    let FigureROW = '';
+    for(let x=0; x<FigureWidht; x++){
+        FigureROW += '*';
+    }
+    console.log(FigureROW);
+    console.log();
 }
-}
-// console.log(FigureROW);
-// ------------------
-// for (y = 0; y < FigureHeight; y++) {
-    // FigureColumn = FigureROW;
-//     FigureColumn = FigureColumn + '*';
-    // console.log(FigureColumn);
-//     console.log(FigureROW)
-
-// }
