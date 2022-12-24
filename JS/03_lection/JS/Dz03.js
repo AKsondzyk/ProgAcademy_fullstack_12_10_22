@@ -143,22 +143,24 @@ console.log(`Cума значень введеного масиву завдан
 // значення з старт індекса по фініш
 // ----------------------------------------------------------------
 
-let ArrayLenghtPartSeven = parseInt(prompt('Яка довжина масива між початковим і кінцевим значеннями завдання 7 ?', 1)); // вводимо [кількість] (довжину масиву для циклу for)
-let StartValue = parseFloat(prompt(`Введіть початкове значення`));                 // вводимо початкове значення
-let EndValue = parseFloat(prompt(`Введіть кінцеве значення більше початкового`));  // вводимо кінцеве значення
+let ArrayLenghtPartSeven = parseInt(prompt('Яка довжина масива між початковим і кінцевим значеннями завдання 7 ?', 1));
+let StartValue = parseFloat(prompt(`Введіть початкове значення`));                 
+let EndValue = parseFloat(prompt(`Введіть кінцеве значення більше початкового`));  
 
 
-let MyArrayTaskSeven = [StartValue, EndValue];                                     // Спочатку наш масив має тільки початкове значення і кінцеве значення
+let MyArrayTaskSeven = [StartValue];                              
 
 for (let x = 0; x < ArrayLenghtPartSeven; x++) {
-    let ArrayNumberPartSeven = parseFloat(prompt(`Введіть числа масива завдання 7`)); // тут в нас запитують значення в масиві які мають бути між початком і кінцем
-    MyArrayTaskSeven.push(ArrayNumberPartSeven);                                   // тут нам потрібно вставити введені між початкове значення і кінцеве. Як правильно це зробити ?
+    let ArrayNumberPartSeven = parseFloat(prompt(`Введіть числа масива завдання 7`)); 
+    MyArrayTaskSeven.push(ArrayNumberPartSeven);                            
 }
+MyArrayTaskSeven.push(EndValue);
+
 console.log(`Ваш введений масив завдання 7: ${MyArrayTaskSeven}`);
 
 function TaskSeven() {
     if (StartValue < EndValue) {
-        MyArrayTaskSeven = MyArrayTaskSeven.slice(0, ArrayLenghtPartSeven+1);  // вирізає значення від [0] до [кількість + 1] (так як [0] рахується) 
+        MyArrayTaskSeven = MyArrayTaskSeven.slice(1, ArrayLenghtPartSeven+1); 
     }
     else {
         alert(`У умові завдання 7 щось введено не коректно`);
