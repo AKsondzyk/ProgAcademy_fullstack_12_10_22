@@ -99,35 +99,50 @@ console.log(BuyOperationTaskOne);
 // 10) повина повернути ( Юзер перемістився на північ на 10 кроків)
 // -----------------------------------------------------------------------------------
 
-let Direction  = prompt(`Виберіть напрямок (north, west, south, east)`);
-let Step = prompt(`На скільки кроків перемістились?`, 10);
-let side = "";
+// let Direction  = prompt(`Виберіть напрямок (north, west, south, east)`);
+// let Step = prompt(`На скільки кроків перемістились?`, 10);
+// let side = "";
 
-function move(Direction){
-    switch (Direction) {
-        case "north":
-            side = "Північ";
-            break;
-        case "west":
-            side = "Захід";
-            break;
-        case "south":
-            side = "Південь";
-            break;
-        case "east":
-            side = "Схід";
-            break;
-        default:
-            side = "екскурсію до воєнного корабля";
-    }
-    return side;
-}
+// function move(Direction){
+//     switch (Direction) {
+//         case "north":
+//             side = "Північ";
+//             break;
+//         case "west":
+//             side = "Захід";
+//             break;
+//         case "south":
+//             side = "Південь";
+//             break;
+//         case "east":
+//             side = "Схід";
+//             break;
+//         default:
+//             side = "екскурсію до воєнного корабля";
+//     }
+//     return side;
+// }
   
-let moveUser =  function (b, callBack) {
-    return console.log(`Юзер змістився на ${side} на ${b} кроків`);
-  }
+// let moveUser =  function (b, callBack) {
+//     return console.log(`Юзер змістився на ${side} на ${b} кроків`);
+//   }
 
- moveUser(Step, move(Direction));
+//  moveUser(Step, move(Direction));
+// -----------------------------------------
+
+let Direction  = prompt(`Виберіть напрямок (Північ, Південь, Захід, Схід)`, `Схід`);
+let Step = prompt(`На скільки кроків перемістились?`, 10);
+ 
+ function move(a, b) {
+     let MoveValue = `${b} на ${a} кроків`;
+     return MoveValue;
+ }
+ 
+ function moveUser(a, b, callback) {
+     let FinalResultTaskTwo = `Юзер змістився на ${callback(a, b)}`;
+     console.log(FinalResultTaskTwo);
+ };
+ moveUser(Step, Direction, move);
 
 // -----------------------------------------------------------------------------------
 // 3) Створіть массив в якому видаляється кожний другий елемент 
