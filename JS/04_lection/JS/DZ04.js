@@ -99,6 +99,8 @@ console.log(BuyOperationTaskOne);
 // 10) повина повернути ( Юзер перемістився на північ на 10 кроків)
 // -----------------------------------------------------------------------------------
 
+// ---------Варіант №1-------------------------------
+
 // let Direction  = prompt(`Виберіть напрямок (north, west, south, east)`);
 // let Step = prompt(`На скільки кроків перемістились?`, 10);
 // let side = "";
@@ -128,21 +130,38 @@ console.log(BuyOperationTaskOne);
 //   }
 
 //  moveUser(Step, move(Direction));
-// -----------------------------------------
+
+// --------------Варіант №2---------------------------
+
+// let Direction  = prompt(`Виберіть напрямок (Північ, Південь, Захід, Схід)`, `Схід`);
+// let Step = prompt(`На скільки кроків перемістились?`, 10);
+ 
+//  function move(a, b) {
+//      let MoveValue = `${b} на ${a} кроків`;
+//      return MoveValue;
+//  }
+ 
+//  function moveUser(a, b, callback) {
+//      let FinalResultTaskTwo = `Юзер змістився на ${callback(a, b)}`;
+//      console.log(FinalResultTaskTwo);
+//  };
+//  moveUser(Step, Direction, move);
+
+// -------------Варіант №3--------------------------
 
 let Direction  = prompt(`Виберіть напрямок (Північ, Південь, Захід, Схід)`, `Схід`);
 let Step = prompt(`На скільки кроків перемістились?`, 10);
- 
+
  function move(a, b) {
-     let MoveValue = `${b} на ${a} кроків`;
-     return MoveValue;
+     return (`Юзер змістився у сторону ${b} на ${a} кроків`);
  }
- 
- function moveUser(a, b, callback) {
-     let FinalResultTaskTwo = `Юзер змістився на ${callback(a, b)}`;
+
+  function moveUser(callback) {
+     let FinalResultTaskTwo =  (`${callback(Step, Direction)}`);
      console.log(FinalResultTaskTwo);
  };
- moveUser(Step, Direction, move);
+
+ moveUser(move);
 
 // -----------------------------------------------------------------------------------
 // 3) Створіть массив в якому видаляється кожний другий елемент 

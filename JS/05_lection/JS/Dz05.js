@@ -10,13 +10,13 @@ function TaskOne(UserName, SecondName, Age) {
     this.Age = Age;
     this.id = ((Math.random()) * 10);
     this.info = function () {
-        console.log(`This User name is ${this.UserName} his/her age ${this.Age}. Say Hello.`);
+        return (`This User name is ${this.UserName} his/her age ${this.Age}. Say Hello.`);
     }
 }
 
 // -------Перевірка-завдання-№1-----------
 
-const ObjectTaskOne = new TaskOne(`Vanya`, `Bogatyr`, 18);
+let ObjectTaskOne = new TaskOne(`Vanya`, `Bogatyr`, 18);
 
 console.log(ObjectTaskOne);
 
@@ -48,19 +48,19 @@ function TaskThree(a, b) {
     this.a = a;
     this.b = b;
     this.info = function () {
-        console.log(`Сторона A = ${this.a} Сторона B = ${this.b}`);
+        return (`Сторона A = ${this.a} Сторона B = ${this.b}`);
     }
     this.perimeter = function () {
         let PerimetrTaskThree = (this.a + this.b) * 2;
-        console.log(`Периметр створеної фігури = ${PerimetrTaskThree}`);
+        return (`Периметр створеної фігури = ${PerimetrTaskThree}`);
     }
     this.Sqare = function () {
         let SquarTaskThree = (this.a * this.b);
-        console.log(`площа створеної фігури = ${SquarTaskThree}`);
+        return (`площа створеної фігури = ${SquarTaskThree}`);
     }
     this.diagonal = function () {
         let DiagonalTaskThree = Math.sqrt(Math.pow(this.a, 2) + Math.pow(this.b, 2));
-        console.log(`Діагональ створеної фігури = ${DiagonalTaskThree}`);
+        return (`Діагональ створеної фігури = ${DiagonalTaskThree}`);
     }
 }
 
