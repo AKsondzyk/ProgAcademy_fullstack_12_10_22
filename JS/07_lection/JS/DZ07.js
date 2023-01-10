@@ -14,11 +14,16 @@ window.onload = ()=>{
     firstItem.innerHTML = 'This is first list item from JS';
 // --------
 
-    let [...listItem] = document.getElementById('list');
+    // let [...listItem] = document.getElementById('list');
+    // console.log(listItem);
+    // listItem.forEach(i=>{
+    //     i.innerHTML = 'List from JS'
+    // })
+
+
+    let listItem = document.querySelector('#list');
     console.log(listItem);
-    listItem.forEach(i=>{
-        i.innerHTML = 'List from JS'
-    })
+    listItem.innerHTML = 'List from JS'
 
 }
 
