@@ -105,25 +105,25 @@ let tableTaskThree = [
 let conter = document.querySelector('.taskThree');
 
 let createTable = document.createElement('table');
-let tableHead = document.createElement('thead');
-let TableHeadItem = document.createElement('th');
+let tableFirstRow = document.createElement('tr');
 
 conter.appendChild(createTable);
-createTable.appendChild(tableHead);
-tableHead.appendChild(TableHeadItem);
+createTable.appendChild(tableFirstRow);
 
 tableTaskThree.forEach((item) => {
-    let td = document.createElement('td');
-    td.innerText = item.title;
-    TableHeadItem.appendChild(td);
+    let tableHead = document.createElement('th');
+    tableHead.innerText = item.title;
+    tableHead.setAttribute('style', 'height 2rem;');
+    tableFirstRow.appendChild(tableHead);
 })
 
 tableTaskThree.forEach((item) => {
     let TableRow = document.createElement('tr');
     createTable.appendChild(TableRow);
-    TableRow.appendChild(document.createElement('td')).append(item.name);
-    TableRow.appendChild(document.createElement('td')).append(item.city);
-    TableRow.appendChild(document.createElement('td')).append(item.course);
+    let td = document.createElement('td');
+    TableRow.appendChild(td).append(item.name);
+    TableRow.appendChild(td).append(item.city);
+    TableRow.appendChild(td).append(item.course);
 });
 
     // ----закриття window.onload
