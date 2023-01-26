@@ -11,14 +11,17 @@ let nowTime = new Date;
 
 function addElement() {
     
-    let newElement = document.createElement('li');
-    taskOneUl.appendChild(newElement);
-    
     let userData = prompt(`Що добавляємо ?`);
+    let newElement = document.createElement('li');
+    newElement.setAttribute('class','taskOneLi');
     newElement.innerText = `${userData} створено ${nowTime.toLocaleString()}`;
+    taskOneUl.appendChild(newElement);
+    console.log(newElement);
 
-    let calcLiItems = document.querySelectorAll('li');
+    let calcLiItems = document.querySelectorAll('.taskOneLi');
+    
     let CheckArr = Array.from(calcLiItems);
+    console.log(CheckArr);
     
     if (CheckArr.length > 5){
         calcLiItems[0].remove()
@@ -26,9 +29,6 @@ function addElement() {
 }
 
 button.addEventListener('click', addElement);
-
-// ----закриття window.onload
-// }
 
 // 2) створити массив обєктів і на оcнові нього вивести на сторінку лінки в яких знаходяться 
 // зображення і alt для зображення, стилізувати задовільно, кількість обєктів в массиві більше 3. 
@@ -75,9 +75,6 @@ let images = [
         taskTwo.lastChild.appendChild(newElementTaskTwo);
     });
 
-// ----закриття window.onload
-// }
-
 // 3) Створити таблицю за допомогою js з полями імя, місто, курс і заповнити її даними також за 
 // допомогою js. В таблиці повино бути мінімум 2 рядки
 
@@ -113,7 +110,7 @@ createTable.appendChild(tableFirstRow);
 tableTaskThree.forEach((item) => {
     let tableHead = document.createElement('th');
     tableHead.innerText = item.title;
-    tableHead.setAttribute('style', 'height 2rem;');
+    tableHead.setAttribute('style', 'height: 2rem; border: 2px solid black;');
     tableFirstRow.appendChild(tableHead);
 })
 
@@ -121,10 +118,17 @@ tableTaskThree.forEach((item) => {
     let TableRow = document.createElement('tr');
     createTable.appendChild(TableRow);
     let td = document.createElement('td');
+    let tdtwo = document.createElement('td');
+    let tdthree = document.createElement('td');
+
     TableRow.appendChild(td).append(item.name);
-    TableRow.appendChild(td).append(item.city);
-    TableRow.appendChild(td).append(item.course);
+    TableRow.appendChild(tdtwo).append(item.city);
+    TableRow.appendChild(tdthree).append(item.course);
+
+    td.setAttribute('style', 'height: 1rem; border: 1px solid green;');
+    tdtwo.setAttribute('style', 'height: 1rem; border: 1px solid green;');
+    tdthree.setAttribute('style', 'height: 1rem; border: 1px solid green;');
 });
 
-    // ----закриття window.onload
+// ----закриття window.onload
 }
