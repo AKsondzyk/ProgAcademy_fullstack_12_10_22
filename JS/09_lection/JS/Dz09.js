@@ -11,8 +11,13 @@ let taskOneArr = [
     {src:'https://rybkivse.ru/wp-content/uploads/2017/10/%D1%84%D0%BE%D1%82%D0%BE-2.jpeg'},
     {src:'https://zooclub.org.ua/assets/files/2018/01/gigantskaya-akula-molot.webp'}
 ];
+let TaskOne = document.querySelector('.TaskOne');
+let NewConter = document.createElement('div');
+TaskOne.setAttribute('style', 'overflow: hidden;');
+TaskOne.appendChild(NewConter);
+NewConter.className = 'Slider';
 
-let slider = document.querySelector('.TaskOne');
+let slider = document.querySelector('.Slider');
 slider.setAttribute('style','transition: all ease 1s; left: 0; display: flex; position: relative;');
 
 taskOneArr.forEach((item)=>{
@@ -77,6 +82,7 @@ document.querySelector('.leftButt').addEventListener('click', function () {
 
 // 3) Зробити таймер який відраховує 60секунд і виводить розрахунок на сторінку, а потім відображає 
 // alert('Ви дочикались знижок). Стилізування за бажанням.
+
 let TasksThreeDiv = document.querySelector('.TaskThree');
 
 let TimerTaskThree = function(){
@@ -101,48 +107,34 @@ setTimeout(TimerTaskThreePartTwo, 6000);
 // За допомгою js задайте left i top щоб вікно було по центру, для цього використайте 
 // window.innerWidth і window.innerHeight а також визначте розміри блоку модального вікна.
 
-let buttonFour = document.querySelector('.ButtTaskFour');
-let divTaskFour = document.querySelector('.TaskFour');
+let Modal = document.querySelector('.Modal');
+Modal.setAttribute('style', 'display: none;');
+
+let Arround = document.querySelector('.Arround');
+Arround.setAttribute('style', 'position: fixed; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6)');
+
+let ModalBody = document.querySelector('.ModalBody');
+ModalBody.setAttribute('style', 'display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;}');
+
+let ModalContent = document.querySelector('.ModalContent');
+ModalContent.setAttribute('style', 'width: 50%; background-color: #fff; padding: 3rem; position: relative;');
+
+let Close = document.querySelector('.close');
+Close.setAttribute('style', 'position: absolute; right: 1rem; top: 1rem; color: red;');
 
 let ModalWindow = function(){
-    let createDiv = document.createElement('div');
-    let createCloseButton = document.createElement('button');
-    createDiv.setAttribute('class','modal');
-    createDiv.setAttribute('style', 'display: flex; width: 60%; height: 20%; background-color: rgb(70,10,5); justify-content: end; margin-left: 20%')
-
-    let windowWidth = window.innerWidth;
-    let windowHeight = window.innerHeight;  
-    // createDiv.setAttribute('style', 'display: flex; width: `${windowWidth}`/2; height: `${windowHeight}`/2; background-color: rgb(70,10,5); justify-content: end;')
-
-
-    createDiv.appendChild(createCloseButton);
-    createCloseButton.innerText = 'X';
-    createCloseButton.setAttribute('style', 'margin-top: 1rem; margin-bottom: 10rem; margin-right: 1rem;');
-
-    let closeMOdal = function (){
-        createDiv.setAttribute('style', 'display: none;');
-    };
-
-    createCloseButton.addEventListener('click', closeMOdal);
-
-// ---------блок підкладка---------------------
-    let createBlocDiv = document.createElement('div');
-    createBlocDiv.setAttribute('style', 'display: flex; width: 100%; padding-top: 100px; background-color: red;')
-    createBlocDiv.addEventListener('click', closeMOdal);
-// -------------------------------------------
-
-    divTaskFour.appendChild(createDiv);
-    divTaskFour.appendChild(createBlocDiv);
-
-// -----Розмір блоку мод вікна-------------
-
-let WhatWidth = createDiv.clientWidth;
-let WhatHeight = createDiv.clientHeight;
-console.log(`ширина вікна ${WhatWidth} px, висота вікна ${WhatHeight} px`);
-
+    Modal.setAttribute('style', 'display: block; position: fixed; width: 100%; height: 100%; top: 0; left: 0;');
 };
 
+let closeMOdal = function (){
+    Modal.setAttribute('style', 'display: none;');
+};
+
+let buttonFour = document.querySelector('.ButtTaskFour');
 buttonFour.addEventListener('click', ModalWindow);
 
-// закриття windowonload
-}
+Close.addEventListener('click', closeMOdal);
+Arround.addEventListener('click', closeMOdal);
+
+// ---закриття windowonload---
+};
