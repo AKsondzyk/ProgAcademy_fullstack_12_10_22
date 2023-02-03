@@ -15,21 +15,18 @@ createH1.setAttribute('style','color: white; text-align: center;')
 let createFNameDiv = document.createElement('div');
 let craeteInputFirstName = document.createElement('input');
 createFNameDiv.appendChild(craeteInputFirstName);
-// createFNameDiv.setAttribute('style', 'margin-top: 20px;');
 craeteInputFirstName.setAttribute('type', 'text');
 craeteInputFirstName.setAttribute('placeholder', 'Full Name');
 
 let createEmailtDiv = document.createElement('div');
 let craeteInputEmail = document.createElement('input');
 createEmailtDiv.appendChild(craeteInputEmail);
-// createEmailtDiv.setAttribute('style', 'margin-top: 20px;');
 craeteInputEmail.setAttribute('type', 'email');
 craeteInputEmail.setAttribute('placeholder', 'E-mail');
 
 let createPhoneDiv = document.createElement('div');
 let craeteInputPhone = document.createElement('input');
 createPhoneDiv.appendChild(craeteInputPhone);
-// createPhoneDiv.setAttribute('style', 'margin-top: 20px;');
 craeteInputPhone.setAttribute('type', 'tel');
 craeteInputPhone.setAttribute('placeholder', 'Phone');
 // craeteInputPhone.setAttribute('pattern','[0-9]{3}-[0-9]{3}-[0-9]{4}');
@@ -37,14 +34,12 @@ craeteInputPhone.setAttribute('placeholder', 'Phone');
 let createPasswordDiv = document.createElement('div');
 let craeteInputPassword = document.createElement('input');
 createPasswordDiv.appendChild(craeteInputPassword);
-// createPasswordDiv.setAttribute('style', 'margin-top: 20px;');
 craeteInputPassword.setAttribute('type', 'password');
 craeteInputPassword.setAttribute('placeholder', 'Password');
 
 let createConfPasswordDiv = document.createElement('div');
 let craeteInputConfPassword = document.createElement('input');
 createConfPasswordDiv.appendChild(craeteInputConfPassword);
-// createConfPasswordDiv.setAttribute('style', 'margin-top: 20px;');
 craeteInputConfPassword.setAttribute('type', 'password');
 craeteInputConfPassword.setAttribute('placeholder', 'Confrim Password');
 
@@ -96,4 +91,49 @@ AllButton.forEach((item) => {
     'width: 200px; height: 30px; border: 4px solid #8F00FF; border-radius: 15px; margin-top: 1rem; background-color: blue; color: white;');
 })
 
-// -------Перевірка паролів-------------------
+// -------------Функції на кнопку REGISTER-----------
+
+SubButton.addEventListener('click', function () {
+
+    // -------Перевірка паролів-------------------
+    if (craeteInputPassword.value !== craeteInputConfPassword.value) {
+        craeteInputPassword.setAttribute('style',
+            'width: 200px; height: 20px; border: 4px solid red; border-radius: 10px; margin-top: 2rem; background-color: black; color: white;');
+
+        craeteInputConfPassword.setAttribute('style',
+            'width: 200px; height: 20px; border: 4px solid red; border-radius: 10px; margin-top: 2rem; background-color: black; color: white;');
+
+        alert('Введені паролі не співпадають');
+        return;
+    }
+
+    // -------Перевірка заповнення рядків форми-------------------
+
+    AllInput.forEach((item) => {
+        if (item.value == 0) {
+            item.setAttribute('style',
+                'width: 200px; height: 20px; border: 4px solid red; border-radius: 10px; margin-top: 2rem; background-color: black; color: white;');
+        }
+    })
+
+
+    // -------Якщо всі умови виконано -------------------
+    if (
+        createFNameDiv.value > 0 &&
+        createEmailtDiv.value > 0 &&
+        createPhoneDiv.value > 0 &&
+        createPasswordDiv.value > 0 &&
+        createConfPasswordDiv.value > 0
+    ) {
+
+        createForm.setAttribute('style', 'display: none;');
+
+        let Congrat = document.createElement('h2');
+        Congrat.innerText = 'Реєстрація пройшла успішно';
+        Congrat.setAttribute('style', 'color: white; text-align: center; font-size: 3rem;');
+
+        body.appendChild(Congrat);
+    }
+
+    return;
+});

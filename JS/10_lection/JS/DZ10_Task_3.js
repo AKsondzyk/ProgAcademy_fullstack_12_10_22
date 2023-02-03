@@ -16,19 +16,19 @@ body.appendChild(createDiv);
 
 window.onkeydown = function (event) {
   let code = event.keyCode;
-
+// ----Вліво----
   if (code == 37) {
     createDiv.style.right = createDiv.offsetLeft + -10 + "px";
   }
-
+// ----Вправо----
   if (code == 39) {
     createDiv.style.left = createDiv.offsetLeft + 10 + "px";
   }
-
+// ----Вверх----
   if (code == 38) {
     createDiv.style.top = createDiv.offsetTop + -10 + "px";
   }
-
+// ----Вниз----
   if (code == 40) {
     createDiv.style.top = createDiv.offsetTop + 10 + "px";
   }
