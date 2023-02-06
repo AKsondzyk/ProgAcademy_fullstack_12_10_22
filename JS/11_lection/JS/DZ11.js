@@ -100,14 +100,49 @@ NewTextArea3.addEventListener('change', function (e) {
     return;
 });
 
-// 4) Створити регулярку яка отримує адресс сторінки і повертає тільки адресс
+// 4) Створити регулярку яка отримує адресс сторінки і повертає тільки адрес
 // "https://prog.academy/?page=1" -- > "https://prog.academy/"
 
+let site = 'https://prog.academy/?page=1';
+let paternSite = /\w{5}\:\S{2}\S+\//;
 
+let ResultTaskFour = '';
 
+function showSite(e) {
+    let ArrSite = e.match(paternSite)
+    // console.log(`Масив 4 завдання = ${ArrSite}`);
+
+    for (let i = 0; i < ArrSite.length; i++) {
+        ResultTaskFour += ArrSite[i];
+        console.log(ResultTaskFour);
+    }
+    return;
+};
+
+showSite(site);
 
 // 5) Створити функцію валідації юзернейма, імя може включати літери цифри, тире і нижьнє тире, 
 // довжина імя повина бути від 4 до 10 символів.Приклад: 
 // validateUsr('a') => false,
 // validateUsr('p1pp1') => true, 
 // validateUsr('asd43_34') => true
+
+let NewForm5 = document.createElement('form');
+
+let NewTextArea5 = document.createElement('input');
+NewTextArea5.setAttribute('type', 'text');
+NewTextArea5.setAttribute('style', 'width: 60%; margin: 10px auto;');
+NewTextArea5.setAttribute('placeholder', 'Введіть текст завдання 5 отримайте рузультат в консолі');
+
+NewForm5.appendChild(NewTextArea5);
+body.appendChild(NewForm5);
+
+// -------
+
+NewTextArea5.addEventListener('change', function (e) {
+    let UserNAme = this.value;
+    let paternUpp = /\b[a-z_0-9-]{4,10}\b/ig;
+    let ResTaskFive = paternUpp.test(UserNAme);
+    console.log(`Чи пройдено тест завдання 5 - ${ResTaskFive}`);
+    return;
+});
