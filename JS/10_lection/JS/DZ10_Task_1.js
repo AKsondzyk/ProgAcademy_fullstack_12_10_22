@@ -92,6 +92,9 @@ AllButton.forEach((item) => {
 })
 
 // -------------Функції на кнопку REGISTER-----------
+// SubButton.onclick = function(e){
+//     e.preventDefault();
+// };
 
 SubButton.addEventListener('click', function () {
 
