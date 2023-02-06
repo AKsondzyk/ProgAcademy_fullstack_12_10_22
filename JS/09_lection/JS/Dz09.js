@@ -114,7 +114,7 @@ let Arround = document.querySelector('.Arround');
 Arround.setAttribute('style', 'position: fixed; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6)');
 
 let ModalBody = document.querySelector('.ModalBody');
-ModalBody.setAttribute('style', 'display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;}');
+ModalBody.setAttribute('style', 'display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;z-index: 2; }');
 
 let ModalContent = document.querySelector('.ModalContent');
 ModalContent.setAttribute('style', 'width: 50%; background-color: #fff; padding: 3rem; position: relative;');
