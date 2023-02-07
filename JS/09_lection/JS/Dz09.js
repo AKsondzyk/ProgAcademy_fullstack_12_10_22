@@ -114,21 +114,37 @@ let Arround = document.querySelector('.Arround');
 Arround.setAttribute('style', 'position: fixed; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6)');
 
 let ModalBody = document.querySelector('.ModalBody');
-ModalBody.setAttribute('style', 'display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;z-index: 2; }');
+// ModalBody.setAttribute('style', 'display: flex; align-items: center; justify-content: center; padding: 3rem 1rem;z-index: 2; }');
 
 let ModalContent = document.querySelector('.ModalContent');
-ModalContent.setAttribute('style', 'width: 50%; background-color: #fff; padding: 3rem; position: relative;');
+// ModalContent.setAttribute('style', 'width: 50%; background-color: #fff; padding: 3rem; position: relative;');
 
 let Close = document.querySelector('.close');
 Close.setAttribute('style', 'position: absolute; right: 1rem; top: 1rem; color: red;');
 
-let ModalWindow = function(){
-    Modal.setAttribute('style', 'display: block; position: fixed; width: 100%; height: 100%; top: 0; left: 0;');
-};
+    let ModalWindow = function () {
+        Modal.setAttribute('style', 'display: block; position: fixed; width: 100%; height: 100%; top: 0; left: 0;');
 
-let closeMOdal = function (){
-    Modal.setAttribute('style', 'display: none;');
-};
+        ModalContent.setAttribute('style', ' background-color: #fff;  position: relative; padding: 30px; width: 500px;  ');
+
+        let width = ModalContent.clientWidth;      // вираховуємо довжину блоку модального вікна
+        console.log(`довжина блоку модального вікна ${width}`);
+
+        let height = ModalContent.clientHeight;    // вираховуємо висоту блоку модального вікна
+        console.log(`висота блоку модального вікна ${height}`);
+
+        let windowWidth = window.innerWidth;        // вираховуємо довжину вікна в браузері
+        console.log(`windowWidth ${windowWidth}`);
+
+        let windowHeight = window.innerHeight;      // вираховуємо висоту вікна в браузері
+        console.log(`windowHeight ${windowHeight}`);
+
+        ModalBody.setAttribute('style', `display: flex; align-items: center; z-index: 2; position: absolute; top:${windowHeight / 2 - height / 2}px; left:${windowWidth / 2 - width / 2}px;}`);
+    };
+
+    let closeMOdal = function () {
+        Modal.setAttribute('style', 'display: none;');
+    };
 
 let buttonFour = document.querySelector('.ButtTaskFour');
 buttonFour.addEventListener('click', ModalWindow);
