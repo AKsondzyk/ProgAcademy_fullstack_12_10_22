@@ -92,11 +92,10 @@ AllButton.forEach((item) => {
 })
 
 // -------------Функції на кнопку REGISTER-----------
-// SubButton.onclick = function(e){
-//     e.preventDefault();
-// };
 
-SubButton.addEventListener('click', function () {
+// SubButton.addEventListener('click', function () {
+SubButton.addEventListener('click', function (e) {
+    e.preventDefault();
 
     // -------Перевірка паролів-------------------
     if (craeteInputPassword.value !== craeteInputConfPassword.value) {
@@ -117,26 +116,25 @@ SubButton.addEventListener('click', function () {
             item.setAttribute('style',
                 'width: 200px; height: 20px; border: 4px solid red; border-radius: 10px; margin-top: 2rem; background-color: black; color: white;');
         }
+        else{
+            item.setAttribute('style',
+            'width: 200px; height: 20px; border: 4px solid #8F00FF; border-radius: 10px; margin-top: 2rem; background-color: black; color: white;');
+        }
     })
 
+    // ---створення блоку успішної реєстрації---
+    let Congrat = document.createElement('h2');
+    Congrat.innerText = 'Реєстрація пройшла успішно';
+    Congrat.setAttribute('style', 'display: none;');
+    body.appendChild(Congrat);
 
     // -------Якщо всі умови виконано -------------------
-    if (
-        createFNameDiv.value > 0 &&
-        createEmailtDiv.value > 0 &&
-        createPhoneDiv.value > 0 &&
-        createPasswordDiv.value > 0 &&
-        createConfPasswordDiv.value > 0
-    ) {
-
-        createForm.setAttribute('style', 'display: none;');
-
-        let Congrat = document.createElement('h2');
-        Congrat.innerText = 'Реєстрація пройшла успішно';
-        Congrat.setAttribute('style', 'color: white; text-align: center; font-size: 3rem;');
-
-        body.appendChild(Congrat);
-    }
+    AllInput.forEach((item) => {
+        if (item.value !== 0) {
+            createForm.setAttribute('style', 'display: none;');
+            Congrat.setAttribute('style', 'color: white; text-align: center; font-size: 3rem;');
+        }
+    });
 
     return;
 });
