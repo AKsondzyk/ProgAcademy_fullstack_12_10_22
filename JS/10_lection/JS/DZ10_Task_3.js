@@ -2,35 +2,48 @@
 // Створити блок на сторінці який переміщужться на 10рх в сторону стрілки яку натиснули.
 
 let body = document.body;
-// body.setAttribute('style', 'display: flex; justify-content: center;')
+body.setAttribute('style', 'display: flex; justify-content: center;')
 
 let createDiv = document.createElement('div');
 let topValue = 100;
 
-createDiv.setAttribute('style',' position: relative; display: flex; width: 200px; height: 200px; background-color: black; text-align: center; color: white;'); // top: 100px;
+createDiv.setAttribute('style', ' position: relative; display: flex; width: 200px; height: 200px; background-color: black; text-align: center; color: white;');
 createDiv.innerText = 'Press key "left" "right" "up" or "down" ';
 
 body.appendChild(createDiv);
 
 // ------------------------------
 
+let valueLeft = 0;
+let valueTop = 0;
+
 window.onkeydown = function (event) {
   let code = event.keyCode;
-// ----Вліво----
+  // ----Вліво----
   if (code == 37) {
-    createDiv.style.left = createDiv.offsetLeft + -10 + "px";
-    // createDiv.style.left =  -10 + "px";
+
+    valueLeft = valueLeft - 10;
+
+    createDiv.style.left = `${valueLeft}` + "px";
   }
-// ----Вправо----
+  // ----Вправо----
   if (code == 39) {
-    createDiv.style.left = createDiv.offsetLeft + 10 + "px";
+
+    valueLeft = valueLeft + 10;
+
+    createDiv.style.left = `${valueLeft}` + "px";
   }
-// ----Вверх----
+  // ----Вверх----
   if (code == 38) {
-    createDiv.style.top = createDiv.offsetTop + -10 + "px";
+
+    valueTop = valueTop - 10;
+
+    createDiv.style.top = `${valueTop}` + "px";
   }
-// ----Вниз----
+  // // ----Вниз----
   if (code == 40) {
-    createDiv.style.top = createDiv.offsetTop + 10 + "px";
+    valueTop = valueTop + 10;
+
+    createDiv.style.top = `${valueTop}` + "px";
   }
 };
