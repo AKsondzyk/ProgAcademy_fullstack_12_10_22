@@ -129,12 +129,24 @@ SubButton.addEventListener('click', function (e) {
     body.appendChild(Congrat);
 
     // -------Якщо всі умови виконано -------------------
-    AllInput.forEach((item) => {
-        if (item.value !== 0) {
-            createForm.setAttribute('style', 'display: none;');
-            Congrat.setAttribute('style', 'color: white; text-align: center; font-size: 3rem;');
-        }
-    });
+
+    // AllInput.forEach((item) => {
+    //     if (item.value.length > 0) {
+    //         createForm.setAttribute('style', 'display: none;');
+    //         Congrat.setAttribute('style', 'color: white; text-align: center; font-size: 3rem;');
+    //     }
+    // });
+    if(
+        craeteInputFirstName.value != 0 &&
+        craeteInputEmail.value != 0 &&
+        craeteInputPhone.value != 0 &&
+        craeteInputPassword.value != 0 &&
+        craeteInputConfPassword.value != 0
+    ){
+        createForm.setAttribute('style', 'display: none;');
+        Congrat.setAttribute('style', 'color: white; text-align: center; font-size: 3rem;');
+    }
+
 
     return;
 });

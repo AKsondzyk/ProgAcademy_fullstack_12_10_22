@@ -42,6 +42,7 @@ ingrid3.textContent = 'Якась зелена трава';
 
 // ---Ціна---
 let price = document.querySelector('.price');
+price.innerHTML = `0 грн`;
 
 // -По розміру-
 let Little = 100;
@@ -66,6 +67,8 @@ sizeSelect.addEventListener('change', function (e) {
         Summ = 0
         price.innerHTML = `${Summ} грн`;
     }
+
+console.log(sizeSelect); 
 
     if (e.target.value == 1) {
         Summ = 0
@@ -231,6 +234,16 @@ let button = document.querySelector('.buy');
 let modal = document.querySelector('.modal');
 modal.setAttribute('style', 'display: none;');
 
+let close = document.querySelector('.btn-close');
+close.addEventListener("click", function () {
+    modal.setAttribute('style', 'display: none;');
+});
+
 button.addEventListener("click", function () {
-      modal.setAttribute('style', 'display: block;');
-  });
+    modal.setAttribute('style', 'display: block;');
+});
+
+
+// setTimeout(function(){
+//     modal.setAttribute('style', 'display: none;');
+// }, 2000);
