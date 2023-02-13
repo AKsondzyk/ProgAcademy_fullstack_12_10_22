@@ -121,5 +121,77 @@ svg2.addEventListener('click', function (e) {
 
 // Створити функцію яка малює коло в канвасі і розміщує в середині кола текст
 
+let canvas = document.createElement('canvas');
+canvas.setAttribute('height', '300');
+canvas.setAttribute('width', '300');
+canvas.setAttribute('style', 'display: block; border: 1px solid red; margin-top: 30px;');
+
+body.appendChild(canvas);
+
+let paint = function(){
+
+    let context = canvas.getContext("2d");
+
+    context.beginPath();
+    context.arc(150, 150, 75, 0, Math.PI * 2, true);
+    context.stroke();
+
+    context.font = "15px serif";
+    context.fillText("Hello from JS", 100, 150);
+};
+
+paint();
 
 // ***Додадткове завдання, створити функцію яка отримує массив данних, колір. І виводить графік на канвасі
+
+let canvas2 = document.createElement('canvas');
+canvas2.setAttribute('height', '300');
+canvas2.setAttribute('width', '300');
+canvas2.setAttribute('style', 'display: block; border: 1px solid green; margin-top: 30px;');
+
+body.appendChild(canvas2);
+// -------------------------------
+let x = [10, 20, 30, 50];
+let y = [30, 50, 160, 20];
+
+let maxY = 0;
+let maxX = 0;
+
+let Graph = function (x, y) {
+    // maxY = Math.max(...y);
+    // maxX = Math.max(...x);
+
+    // console.log(`max Y = ${maxY}`);
+    // console.log(`max X = ${maxX}`);
+
+    let ctx = canvas2.getContext("2d");
+
+    ctx.lineWidth = 5; // товщина лінії координат
+    
+    ctx.moveTo(5, 295); //початок координат
+    ctx.lineTo(5, 5); //вісь Y
+    
+    ctx.moveTo(5, 295); //початок координат
+    ctx.lineTo(295, 295); //вісь X
+
+//  ---Треба зробити цикл на випадок різної довжини масиву--   
+
+    ctx.lineWidth = 2; // товщина лінії графіку  
+
+    ctx.moveTo(`${x[0]}`, `${295 - y[0]}`); // 1 точка 
+    ctx.lineTo(`${x[1]}`, `${295 - y[1]}`); // 1 лінія
+    
+    ctx.moveTo(`${x[1]}`, `${295 - y[1]}`); // 2 точка 
+    ctx.lineTo(`${x[2]}`, `${295 - y[2]}`); // 2 лінія
+
+    ctx.moveTo(`${x[2]}`, `${295 - y[2]}`); // 3 точка 
+    ctx.lineTo(`${x[3]}`, `${295 - y[3]}`); // 3 лінія
+
+    ctx.moveTo(`${x[3]}`, `${295 - y[3]}`); // 3 точка 
+    ctx.lineTo(`${x[4]}`, `${295 - y[4]}`); // 3 лінія
+
+    ctx.stroke();
+
+};
+
+Graph(x, y);
