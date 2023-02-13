@@ -239,7 +239,7 @@ sizeSelect.addEventListener('change', function (e) {
     return;
 });
 
-// ---великий варіант із зеленю на два селекта----
+// ---великий варіант із зеленню на два селекта----
 
 typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 3 && sizeSelect.value == 3) {
@@ -258,43 +258,43 @@ sizeSelect.addEventListener('change', function (e) {
 });
 
 // -----Добавка----
-let Mashrooms = document.querySelectorAll('#Grib');
-let Cheese = document.querySelectorAll('#Cheese');
-let Sosige = document.querySelectorAll('#Sosige');
+let Mashrooms = document.querySelector('#Grib');
+let Cheese = document.querySelector('#Cheese');
+let Sosige = document.querySelector('#Sosige');
 
 
-// Mashrooms.addEventListener('change', function(){
-//     if (this.checked) {
-//         Summ = Summ + check;
-//         price.innerHTML = `${Summ} грн`;
-//     } else {
-//         Summ = Summ - check;
-//         price.innerHTML = `${Summ} грн`;
-//     }
-//     return;
-// });
+Mashrooms.addEventListener('change', function(e){
+    if (e.target.checked) {
+        Summ = Summ + check;
+        price.innerHTML = `${Summ} грн`;
+    } else {
+        Summ = Summ - check;
+        price.innerHTML = `${Summ} грн`;
+    }
+    return;
+});
 
-// // Cheese.addEventListener('change', function(){
-// //     if (this.checked) {
-// //         Summ = Summ + check;
-// //         price.innerHTML = `${Summ} грн`;
-// //     } else {
-// //         Summ = Summ - check;
-// //         price.innerHTML = `${Summ} грн`;
-// //     }
-// //     return;
-// // });
+Cheese.addEventListener('change', function(e){
+    if (e.target.checked) {
+        Summ = Summ + check;
+        price.innerHTML = `${Summ} грн`;
+    } else {
+        Summ = Summ - check;
+        price.innerHTML = `${Summ} грн`;
+    }
+    return;
+});
 
-// // Sosige.addEventListener('change', function(){
-// //     if (this.checked) {
-// //         Summ = Summ + check;
-// //         price.innerHTML = `${Summ} грн`;
-// //     } else {
-// //         Summ = Summ - check;
-// //         price.innerHTML = `${Summ} грн`;
-// //     }
-// //     return;
-// // });
+Sosige.addEventListener('change', function(e){
+    if (e.target.checked) {
+        Summ = Summ + check;
+        price.innerHTML = `${Summ} грн`;
+    } else {
+        Summ = Summ - check;
+        price.innerHTML = `${Summ} грн`;
+    }
+    return;
+});
 
 // ---Доставка---
 let Delivery = document.querySelector("#Delivery");
@@ -331,7 +331,3 @@ button.addEventListener("click", function () {
     modal.setAttribute('style', 'display: block;');
 });
 
-
-// // setTimeout(function(){
-// //     modal.setAttribute('style', 'display: none;');
-// // }, 2000);
