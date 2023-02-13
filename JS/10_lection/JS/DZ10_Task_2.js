@@ -40,6 +40,11 @@ ingrid2.textContent = 'Ковбаска';
 let ingrid3 = document.querySelector('.topping3');
 ingrid3.textContent = 'Якась зелена трава';
 
+// ----Кнопка----------
+
+let button = document.querySelector('.buy');
+button.disabled = true;
+
 // ----------
 // ---Ціна---
 // ----------
@@ -70,6 +75,8 @@ sizeSelect.addEventListener('change', function (e) {
         e.target.value != 3) {
         Summ = 0;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = true;
     }
     return;
 });
@@ -80,6 +87,7 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 0 && sizeSelect.value !== 0) {
         Summ = 0;
         price.innerHTML = `${Summ} грн`;
+        button.disabled = true;
     }
     return;
 });
@@ -88,6 +96,7 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value !== 0 && typeSelect.value == 0) {
         Summ = 0;
         price.innerHTML = `${Summ} грн`;
+        button.disabled = true;
     }
     return;
 });
@@ -99,6 +108,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 1 && sizeSelect.value == 1) {
         Summ = Little + op1;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -107,6 +118,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 1 && typeSelect.value == 1) {
         Summ = Little + op1;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -117,6 +130,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 2 && sizeSelect.value == 1) {
         Summ = Little + op2;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -125,6 +140,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 1 && typeSelect.value == 2) {
         Summ = Little + op2;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -135,6 +152,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 3 && sizeSelect.value == 1) {
         Summ = Little + op3;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -143,6 +162,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 1 && typeSelect.value == 3) {
         Summ = Little + op3;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -154,6 +175,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 1 && sizeSelect.value == 2) {
         Summ = Medium + op1;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -162,6 +185,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 2 && typeSelect.value == 1) {
         Summ = Medium + op1;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -172,6 +197,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 2 && sizeSelect.value == 2) {
         Summ = Medium + op2;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -180,6 +207,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 2 && typeSelect.value == 2) {
         Summ = Medium + op2;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -190,6 +219,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 3 && sizeSelect.value == 2) {
         Summ = Medium + op3;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -198,6 +229,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 2 && typeSelect.value == 3) {
         Summ = Medium + op3;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -209,6 +242,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 1 && sizeSelect.value == 3) {
         Summ = Large + op1;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -217,6 +252,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 3 && typeSelect.value == 1) {
         Summ = Large + op1;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -227,6 +264,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 2 && sizeSelect.value == 3) {
         Summ = Large + op2;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -235,6 +274,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 3 && typeSelect.value == 2) {
         Summ = Large + op2;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -245,6 +286,8 @@ typeSelect.addEventListener('change', function (e) {
     if (e.target.value == 3 && sizeSelect.value == 3) {
         Summ = Large + op3;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -253,6 +296,8 @@ sizeSelect.addEventListener('change', function (e) {
     if (e.target.value == 3 && typeSelect.value == 3) {
         Summ = Large + op3;
         price.innerHTML = `${Summ} грн`;
+
+        button.disabled = false;
     }
     return;
 });
@@ -317,7 +362,6 @@ Sam.addEventListener("change", function (e) {
 });
 
 // ----модальне вікно----
-let button = document.querySelector('.buy');
 
 let modal = document.querySelector('.modal');
 modal.setAttribute('style', 'display: none;');
