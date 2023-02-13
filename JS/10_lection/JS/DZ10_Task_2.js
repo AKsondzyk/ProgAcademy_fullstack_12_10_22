@@ -15,6 +15,9 @@ body.setAttribute('style', 'margin: 5% auto;');
 
 let FormWidth = document.querySelector('form');
 FormWidth.setAttribute('style', 'width:500px; margin: 0 auto;');
+FormWidth.addEventListener('submit', function (e) {
+    e.preventDefault()
+});
 
 // ---Розміри піцци---
 let sizeSelect = document.querySelector('.pizzasize');
@@ -373,5 +376,12 @@ close.addEventListener("click", function () {
 
 button.addEventListener("click", function () {
     modal.setAttribute('style', 'display: block;');
+
+    let closeW = function(){
+        modal.setAttribute('style', 'display: none;');
+    };
+
+    window.setTimeout(closeW , 5000);
+
 });
 
