@@ -68,6 +68,7 @@ body.appendChild(ButDiametr);
 // ----виклик функції----------
 cardCreate();
 
+// --------------------------
 // ----функція сортування------
 let firstPress = true;
 
@@ -133,10 +134,6 @@ ButPopulation.onclick = function (){
     }
 };
 
-
-
-
-// Planet().then(function(){console.log(data.results)}).then(cardCreate());
 
 // 5) додаткове завдання зробити фільтр який вибирає яка планета найчастіше зявлялась в фільмах 
 // підказка: чим більше довжина "films"

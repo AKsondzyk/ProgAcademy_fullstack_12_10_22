@@ -1,0 +1,95 @@
+// "use strict"
+
+const {src, dest, series, parallel} = require("gulp");
+const gulp = require("gulp");
+
+const autoprefixer = require("gulp-autoprefixer");
+const browserSync = require("browser-sync").create();
+const del = require("del");
+
+// /* Paths */ 
+
+const StartData = "Start_Data/";
+const ReadyData = "Ready_Data/";
+
+const path = {
+    build:{
+        html: ReadyData,
+        css: ReadyData + "/Style/",
+        js: ReadyData + "/JS/",
+        images: ReadyData + "/IMG/"
+    },
+    src:{
+        html: StartData + "*.html",
+        css: StartData + "/Style/*.css",
+        js: StartData + "/JS/*.js",
+        images: StartData + "/IMG/**/*.{jpeg, png, svg, gif, ico, json}"
+    },
+    watch:{
+        html: StartData + "**/*.html",
+        css: StartData + "/Style/**/*.css",
+        js: StartData + "/JS/**/*.js",
+        images: StartData + "/IMG/**/*.{jpeg, png, svg, gif, ico, json}"
+    },
+    clean: "./" + ReadyData
+};
+
+function server(){
+    browserSync.init({
+        server: {
+            baseDir: "./" + ReadyData
+        }
+    });
+};
+
+function html(){
+    return src(path.src.html, {base: StartData})
+    .pipe(dest(path.build.html))
+    .pipe(browserSync.reload({stream: true}));
+};
+
+function css(){
+    return src(path.src.css, {base: StartData})
+    .pipe(autoprefixer())
+    .pipe(dest(path.build.css))
+    .pipe(browserSync.reload({stream: true}));
+};
+
+function js(){
+    return src(path.src.js, {base: StartData})
+    .pipe(dest(path.build.js))
+    .pipe(browserSync.reload({stream: true}));
+};
+
+function images(){
+    return src(path.src.images, {base: StartData})
+    .pipe(dest(path.build.images))
+    .pipe(browserSync.reload({stream: true}));
+};
+
+function clean(){
+    return del(path.clean);
+};
+
+function watchFiles(){
+    gulp.watch([path.watch.html], html)
+    gulp.watch([path.watch.css], css)
+    gulp.watch([path.watch.js], js)
+    gulp.watch([path.watch.images], images)
+};
+
+
+
+
+
+const withoutWatch = series(clean, gulp.parallel(html, css, js, images)); // без консолі та лайву 
+const run = parallel(withoutWatch, watchFiles);                           // з консоллю яка показує зміни
+const full = parallel(withoutWatch, watchFiles, server);                  // з сервером який не працює )
+
+// ---варіанти запуску------
+
+exports.withoutWatch = withoutWatch;
+
+exports.default = run;
+
+exports.full = full;
