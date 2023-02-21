@@ -8,7 +8,6 @@ const browserSync = require("browser-sync").create();
 const reload      = browserSync.reload;
 const del = require("del");
 const plumber = require('gulp-plumber');
-// const coffee = require('gulp-coffee');
 
 // /* Paths */ 
 
@@ -44,11 +43,6 @@ function server(){
         }
     });
 };
-
-// gulp.src('./src/*.ext')
-//     .pipe(plumber())
-//     .pipe(coffee())
-//     .pipe(gulp.dest('./dist'));
 
 function html(){
     return src(path.src.html, {base: StartData})
@@ -90,18 +84,16 @@ function watchFiles(){
     gulp.watch([path.watch.images], images).on("change", reload);
 };
 
-
-
 // --константи запуску--------
 
 const withoutWatch = series(clean, gulp.parallel(html, css, js, images)); // без консолі та лайву 
 const run = parallel(withoutWatch, watchFiles);                           // з консоллю яка показує зміни
-const full = parallel(withoutWatch, watchFiles, server);                  // з сервером який не працює )
+const full = parallel(withoutWatch, watchFiles, server);                  // повний пакет
 
 // ---варіанти запуску------
 
 exports.withoutWatch = withoutWatch;
 
-exports.default = run;
-
 exports.full = full;
+
+exports.default = run;
