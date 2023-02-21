@@ -24,7 +24,7 @@ $(document).ready(function () {
         ]
     });
 
-    $('img').attr('style', 'width: 300px;');
+    $('img').attr('style', 'width: 95%;');
 
 });
 

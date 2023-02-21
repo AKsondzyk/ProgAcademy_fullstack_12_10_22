@@ -15,21 +15,21 @@ const ReadyData = "Ready_Data/";
 const path = {
     build:{
         html: ReadyData,
-        css: ReadyData + "/Style/",
-        js: ReadyData + "/JS/",
-        images: ReadyData + "/IMG/"
+        css: ReadyData + "./Style/",
+        js: ReadyData + "./JS/",
+        images: ReadyData + "./IMG/"
     },
     src:{
         html: StartData + "*.html",
-        css: StartData + "/Style/*.css",
-        js: StartData + "/JS/*.js",
-        images: StartData + "/IMG/**/*.{jpeg, png, svg, gif, ico, json}"
+        css: StartData + "./Style/*.css",
+        js: StartData + "./JS/*.js",
+        images: StartData + "./IMG/**/*.{jpeg, png, svg, gif, ico, json}"
     },
     watch:{
         html: StartData + "**/*.html",
-        css: StartData + "/Style/**/*.css",
-        js: StartData + "/JS/**/*.js",
-        images: StartData + "/IMG/**/*.{jpeg, png, svg, gif, ico, json}"
+        css: StartData + "./Style/**/*.css",
+        js: StartData + "./JS/**/*.js",
+        images: StartData + "./IMG/**/*.{jpeg, png, svg, gif, ico, json}"
     },
     clean: "./" + ReadyData
 };
