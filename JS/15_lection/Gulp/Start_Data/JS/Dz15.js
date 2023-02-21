@@ -1,3 +1,4 @@
+window.onload = function(){
 let body = document.querySelector('body');
 
 let p = document.querySelector('p');
@@ -10,3 +11,4 @@ div.textContent = 'New Text from JS';
 div.setAttribute('style', 'bacground-color: orange;');
 
 body.appendChild(div);
+};

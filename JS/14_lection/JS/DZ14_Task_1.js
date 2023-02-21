@@ -4,136 +4,99 @@
 // Використати https://swapi.dev/api/planets
 
 let body = document.body;
-body.setAttribute('style','display: flex; justify-content: center; gap: 10px; flex-direction: column;');
 
 let url1 = 'https://swapi.dev/api/planets';
-let data = {};
+let ReadyData = [];
 
 // -----Запит до сайту---------------
-async function Planet(){
-    let result1 = await fetch(url1);
-    data = await result1.json();
-    // console.log(data);
-    return data;
-};
 
-// ----Створення карт даних----------
-let cardCreate = function () {
-    Planet()
-        .then(function () { console.log(data.results) }) // повертає масив в консоль
-        .then(function () {
-            data.results.forEach((index) => {
-                let CreateDiv = document.createElement('div');
-                CreateDiv.setAttribute('style', 'border: 2px solid black; width: 25%;');
-                CreateDiv.setAttribute('class', 'Main');
+fetch(url1)
+    .then((response) => response.json())
+    .then((data) => {
+        ReadyData = data.results;
+        CreateCard(ReadyData);
+    });
 
-                let ul = document.createElement('ul');
-                ul.innerText = `${index.name}`;
-                ul.setAttribute('style', 'font-weight: bold;');
-
-                let population = document.createElement('li');
-                population.innerText = `Population = ${index.population}`;
-                population.setAttribute('style', 'font-weight: normal;');
-                population.setAttribute('class', 'population');
-
-                let diameter = document.createElement('li');
-                diameter.innerText = `Diameter = ${index.diameter}`;
-                diameter.setAttribute('style', 'font-weight: normal;');
-                diameter.setAttribute('class', 'diameter');
-
-                ul.appendChild(population);
-                ul.appendChild(diameter);
-
-                CreateDiv.appendChild(ul);
-
-                body.appendChild(CreateDiv);
-                return;
-            })
-        })
-
-};
-
-// -------кнопки сортування-----------
+// --------------Створення карт даних----------
+// ---Кнопки зверху сторінки---------
 let ButPopulation = document.createElement('button');
-ButPopulation.setAttribute('style', 'background-color: orange; width: 10%;');
+ButPopulation.setAttribute('style', 'background-color: orange; width: 10%; margin-left: 1%; margin-bottom: 0.5%;');
 ButPopulation.innerText = 'Sort by Population';
 
 let ButDiametr = document.createElement('button');
-ButDiametr.setAttribute('style', 'background-color: orange; width: 10%;');
+ButDiametr.setAttribute('style', 'background-color: orange; width: 10%; margin-left: 1%; margin-bottom: 0.5%');
 ButDiametr.innerText = 'Sort by Diametr';
 
 body.appendChild(ButPopulation);
 body.appendChild(ButDiametr);
 
-// ----виклик функції----------
-cardCreate();
+// ---Div в який вписуємо дані
+let MainDiv = document.createElement('div');
+MainDiv.setAttribute('style','display: flex; justify-content: center; gap: 10px; flex-direction: column;');
+body.appendChild(MainDiv);
 
-// --------------------------
-// ----функція сортування------
-let firstPress = true;
+// ---Функіця створення даних--------
 
-ButPopulation.onclick = function (){
-    let AllDiv = document.querySelectorAll('.Main '); // вибираэсо всі Div
+function CreateCard(ReadyData) {
+    MainDiv.innerHTML = "";
 
-    // console.log(AllDiv);
+    ReadyData.forEach((planet) => {
+        let createDiv = document.createElement("div");
+        createDiv.setAttribute('style', 'border: 2px solid black; width: 25%;');
 
-    let ident = /\d+/;                                // задаємо патерн для пошуку цифр
-    
+        let name = document.createElement("h4");
+        name.textContent = planet.name;
+        name.setAttribute('style', 'font-weight: bold; margin: 0 auto; ');
 
-    if (firstPress) {
-        firstPress = !firstPress;
+        let population = document.createElement("p");
+        population.textContent = `Population: ${planet.population}`;
+        population.setAttribute('style', 'margin: 2px auto;');
 
-        AllDiv.forEach((index) => {                                // у всіх Div шукаємо li з популяцією
-            let Order = index.children[0].children[0].innerText;
-            console.log(Order);
-            let Res = [];
+        let diameter = document.createElement("p");
+        diameter.textContent = `Diameter: ${planet.diameter}`;
+        diameter.setAttribute('style', 'margin: 2px auto;');
 
-            if (Order !== "Population = unknown") {          // якщо популяція задано додаємо в Res
-                Res = Order.match(ident);
-            }
-            else {
-                Res.push(0);                                  // якщо ні - Res = 0
-            }
+        createDiv.appendChild(name);
+        createDiv.appendChild(population);
+        createDiv.appendChild(diameter);
 
-            // console.log(Res);
-
-            if (Res.lenhgt !== 0) {
-                index.setAttribute('style', `border: 2px solid black; width: 25%; order: ${Res};`);
-            }
-            else {
-                // Res = 0;
-                index.setAttribute('style', `border: 2px solid black; width: 25%; order: 0;`);
-            };
-        });
-    }
-    else{
-        firstPress = !firstPress;
-
-        AllDiv.forEach((index) => {                                // у всіх Div шукаємо li з популяцією
-            let Order = index.children[0].children[0].innerText;
-            // console.log(Order);
-            let Res = [];
-
-            if (Order !== "Population = unknown") {          // якщо популяція задано додаємо в Res
-                Res = Order.match(ident);
-            }
-            else {
-                Res.push(0);                                  // якщо ні - Res = 0
-            }
-
-            // console.log(Res);
-
-            if (Res.lenhgt !== 0) {
-                index.setAttribute('style', `border: 2px solid black; width: 25%; order: ${Res*-1};`);
-            }
-            else {
-                // Res = 0;
-                index.setAttribute('style', `border: 2px solid black; width: 25%; order: 0;`);
-            };
-        });
-    }
+        MainDiv.appendChild(createDiv);
+    });
 };
 
+// ---Сортування по кнопках-----------------------
+let PopFirtPress = true;
+let DiamFirtPress = true;
 
-// 5) додаткове завдання зробити фільтр який вибирає яка планета найчастіше зявлялась в фільмах 
-// підказка: чим більше довжина "films"
+ButPopulation.addEventListener("click", () => {
+    console.log(ReadyData);
+
+    ReadyData.forEach((index) => {
+        if (index.population == "unknown") {
+            index.population = 0;
+        }
+    });
+
+    if (PopFirtPress) {
+        ReadyData.sort((a, b) => Number.parseFloat(b.population) - Number.parseFloat(a.population));
+        CreateCard(ReadyData);
+    }
+    else {
+        ReadyData.sort((a, b) => Number.parseFloat(a.population) - Number.parseFloat(b.population));
+        CreateCard(ReadyData);
+    }
+    PopFirtPress = !PopFirtPress;
+});
+
+
+ButDiametr.addEventListener("click", () => {
+    if (DiamFirtPress) {
+        ReadyData.sort((a, b) => parseFloat(b.diameter) - parseFloat(a.diameter));
+        CreateCard(ReadyData);
+    }
+    else{
+        ReadyData.sort((a, b) => parseFloat(a.diameter) - parseFloat(b.diameter));
+        CreateCard(ReadyData);
+    }
+    DiamFirtPress = !DiamFirtPress;
+});

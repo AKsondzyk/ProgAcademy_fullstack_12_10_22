@@ -7,6 +7,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const reload      = browserSync.reload;
 const del = require("del");
+const plumber = require('gulp-plumber');
+// const coffee = require('gulp-coffee');
 
 // /* Paths */ 
 
@@ -16,9 +18,9 @@ const ReadyData = "Ready_Data/";
 const path = {
     build:{
         html: ReadyData,
-        css: ReadyData + "/Style/",
-        js: ReadyData + "/JS/",
-        images: ReadyData + "/IMG/"
+        css: ReadyData + "./Style/",
+        js: ReadyData + "./JS/",
+        images: ReadyData + "./IMG/"
     },
     src:{
         html: StartData + "*.html",
@@ -28,9 +30,9 @@ const path = {
     },
     watch:{
         html: StartData + "**/*.html",
-        css: StartData + "/Style/**/*.css",
-        js: StartData + "/JS/**/*.js",
-        images: StartData + "/IMG/**/*.{jpeg, png, svg, gif, ico, json}"
+        css: StartData + "./Style/**/*.css",
+        js: StartData + "./JS/**/*.js",
+        images: StartData + "./IMG/**/*.{jpeg, png, svg, gif, ico, json}"
     },
     clean: "./" + ReadyData
 };
@@ -43,14 +45,21 @@ function server(){
     });
 };
 
+// gulp.src('./src/*.ext')
+//     .pipe(plumber())
+//     .pipe(coffee())
+//     .pipe(gulp.dest('./dist'));
+
 function html(){
     return src(path.src.html, {base: StartData})
+    .pipe(plumber())
     .pipe(dest(path.build.html))
     .pipe(browserSync.reload({stream: true}));
 };
 
 function css(){
     return src(path.src.css, {base: StartData})
+    .pipe(plumber())
     .pipe(autoprefixer())
     .pipe(dest(path.build.css))
     .pipe(browserSync.reload({stream: true}));
@@ -58,12 +67,14 @@ function css(){
 
 function js(){
     return src(path.src.js, {base: StartData})
+    .pipe(plumber())
     .pipe(dest(path.build.js))
     .pipe(browserSync.reload({stream: true}));
 };
 
 function images(){
     return src(path.src.images, {base: StartData})
+    .pipe(plumber())
     .pipe(dest(path.build.images))
     .pipe(browserSync.reload({stream: true}));
 };

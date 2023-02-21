@@ -10,3 +10,6 @@ div.textContent = 'New Text from JS';
 div.setAttribute('style', 'bacground-color: orange;');
 
 body.appendChild(div);
+
+
+let hsdgsd = 0;
