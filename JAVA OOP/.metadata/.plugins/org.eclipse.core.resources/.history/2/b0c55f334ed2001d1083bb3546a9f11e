@@ -1,0 +1,18 @@
+package taskone;
+
+public class Laptop {
+
+	String brands;
+	double screenSize;
+	String screenResolution;
+	int screenRefreshRate;
+	int storage;
+	int ram;
+	String operatingSystem;
+
+	public String toString() {
+
+		return "Device - Laptop";
+	}
+}
+

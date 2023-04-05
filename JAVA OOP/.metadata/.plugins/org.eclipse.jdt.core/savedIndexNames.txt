@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\Prog Academy\DZ\ProgAcademy_fullstack_12_10_22\JAVA\.metadata\.plugins\org.eclipse.jdt.core
+2221417949.index
+1865797976.index
+4130975552.index

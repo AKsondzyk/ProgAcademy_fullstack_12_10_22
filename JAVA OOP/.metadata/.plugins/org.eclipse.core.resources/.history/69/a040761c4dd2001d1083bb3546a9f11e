@@ -1,0 +1,65 @@
+package taskone;
+
+public class Mobile {
+	String brands;
+	double display;
+	int screenRefreshRate;
+	int storage;
+	int ram;
+	String operatingSystem;
+
+	public void aboutPhone() {
+		System.out.println("Device - Mobile");
+		System.out.println("Brand - " + brands);
+		System.out.println("Display - " + display);
+		System.out.println("Screen Refresh Rate - " + screenRefreshRate);
+		System.out.println("Storage - " + storage);
+		System.out.println("RAM - " + ram);
+		System.out.println("Operating System" + operatingSystem);
+	}
+	
+	
+	
+		//
+		public Mobile() {
+			super();
+		}
+
+		public Object(int price, String name, double weight) {
+			super();
+			this.price = price;
+			this.name = name;
+			this.weight = weight;
+		}
+
+		public int getPrice() {
+			return price;
+		}
+
+		public void setPrice(int price) {
+			this.price = price;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public double getWeight() {
+			return weight;
+		}
+
+		public void setWeight(double weight) {
+			this.weight = weight;
+		}
+
+		@Override
+		public String toString() {
+			return "Object [price=" + price + ", name=" + name + ", weight=" + weight + "]";
+		}	
+		//
+	}
+}

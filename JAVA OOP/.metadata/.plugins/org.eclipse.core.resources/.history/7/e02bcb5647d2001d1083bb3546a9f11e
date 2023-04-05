@@ -1,0 +1,11 @@
+package taskone;
+
+public class Mobile {
+	String brands;
+	double display;
+	int screenRefreshRate;
+	int storage;
+	int ram;
+	String operatingSystem;
+
+}
