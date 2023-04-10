@@ -2,13 +2,13 @@ package taskone;
 
 public class Mobile {
 // Поля
-	String brands;
-	double display;
-	int screenRefreshRate;
-	int storage;
-	int ram;
-	String operatingSystem;
-	int price;
+	private String brands;
+	private double display;
+	private int screenRefreshRate;
+	private int storage;
+	private int ram;
+	private String operatingSystem;
+	private int price;
 
 // Конструктор за замовчуванням
 	public Mobile() {

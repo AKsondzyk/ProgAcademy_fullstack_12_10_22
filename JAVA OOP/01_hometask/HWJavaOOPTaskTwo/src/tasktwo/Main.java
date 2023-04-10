@@ -14,7 +14,7 @@ public class Main {
 		triangle2.setSideC(7);
 		
 		System.out.println(triangle2);
-		System.out.println(triangle2.getArea());
+		System.out.println("Площа вашого трикутника = " + triangle2.getArea());
 	}
 
 }

@@ -2,10 +2,10 @@ package tasktwo;
 
 public class Triangle {
 // Поля
-	double sideA;
-	double sideB;
-	double sideC;
-	double area;
+	private double sideA;
+	private double sideB;
+	private double sideC;
+	private double area;
 
 	public Triangle() {
 		super();
@@ -43,11 +43,18 @@ public class Triangle {
 		this.sideC = sideC;
 	}
 
-	public String getArea() {
+//	public String getArea() {
+//		double halfPerimetr = (sideA + sideB + sideC) / 2;
+//		area = Math.sqrt(halfPerimetr * (halfPerimetr - sideA) * (halfPerimetr - sideB) * (halfPerimetr - sideC));
+//		return "Площа вашого трикутника = " + area;
+//	}
+	
+	public double getArea() {
 		double halfPerimetr = (sideA + sideB + sideC) / 2;
 		area = Math.sqrt(halfPerimetr * (halfPerimetr - sideA) * (halfPerimetr - sideB) * (halfPerimetr - sideC));
-		return "Площа вашого трикутника = " + area;
+		return area;
 	}
+	
 
 	@Override
 	public String toString() {

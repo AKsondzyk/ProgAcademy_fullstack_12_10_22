@@ -9,26 +9,26 @@ public class Main {
 // работу
 
 		Mobile phone1 = new Mobile();
-		phone1.brands = "Apple";
-		phone1.display = 6.1;
-		phone1.screenRefreshRate = 60;
-		phone1.storage = 256;
-		phone1.ram = 3;
-		phone1.operatingSystem = "IOS";
-		phone1.price = 60000;
+		phone1.setBrands("Apple");
+		phone1.setDisplay(6.1);
+		phone1.setScreenRefreshRate(60);
+		phone1.setStorage(256);
+		phone1.setRam(3);
+		phone1.setOperatingSystem("IOS");
+		phone1.setPrice(60000);
 
 		System.out.println(phone1);
 		System.out.println(phone1.aboutPhone());
 		System.out.println();
 
 		Mobile phone2 = new Mobile();
-		phone2.brands = "Oneplus";
-		phone2.display = 6.7;
-		phone2.screenRefreshRate = 120;
-		phone2.storage = 256;
-		phone2.ram = 8;
-		phone2.operatingSystem = "Android";
-		phone2.price = 48000;
+		phone2.setBrands("Oneplus");
+		phone2.setDisplay(6.7);
+		phone2.setScreenRefreshRate(120);
+		phone2.setStorage(256);
+		phone2.setRam(8);
+		phone2.setOperatingSystem("Android");
+		phone2.setPrice(48000);
 
 		System.out.println(phone2);
 		System.out.println(phone2.aboutPhone());
