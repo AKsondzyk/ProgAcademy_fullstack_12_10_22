@@ -1,7 +1,7 @@
 package honetasktwo;
 
 public class Veterinarian {
-	String name;
+	private String name;
 
 	public Veterinarian() {
 		super();

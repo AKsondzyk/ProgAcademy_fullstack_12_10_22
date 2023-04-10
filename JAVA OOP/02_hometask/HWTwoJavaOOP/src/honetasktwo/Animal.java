@@ -1,9 +1,9 @@
 package honetasktwo;
 
 public class Animal {
-	String ration;
-	String color;
-	int weight;
+	private String ration;
+	private String color;
+	private int weight;
 
 	public Animal() {
 		super();
