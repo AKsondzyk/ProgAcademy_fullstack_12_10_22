@@ -16,7 +16,7 @@ public class Main {
 		SumaCalc var1 = new SumaCalc(Arr, 0, 999);
 		SumaCalc var2 = new SumaCalc(Arr, 1000, 1999);
 		SumaCalc var3 = new SumaCalc(Arr, 2000, 2999);
-		SumaCalc var4 = new SumaCalc(Arr, 3000, 4000);
+		SumaCalc var4 = new SumaCalc(Arr, 3000, 3999);
 
 		Thread thread1 = new Thread(var1);
 		Thread thread2 = new Thread(var2);
