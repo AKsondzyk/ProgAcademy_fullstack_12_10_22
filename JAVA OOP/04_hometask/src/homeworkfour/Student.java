@@ -1,5 +1,7 @@
 package homeworkfour;
 
+import java.util.Objects;
+
 public class Student extends Human {
 	private int id;
 	private String groupName;
@@ -33,6 +35,26 @@ public class Student extends Human {
 	@Override
 	public String toString() {
 		return super.toString() + "id=" + id + ", groupName=" + groupName + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(groupName, id);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		return Objects.equals(groupName, other.groupName) && id == other.id;
 	}
 
 }
