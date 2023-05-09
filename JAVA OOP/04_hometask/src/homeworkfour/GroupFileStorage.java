@@ -3,23 +3,29 @@ package homeworkfour;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import java.util.Scanner;
 
 public class GroupFileStorage {
 
 	public static void saveGroupToCSV(Group group) {
-		Student[] students = group.getStudents();
+//		Student[] students = group.getStudents();
+		List<Student> students = group.getStudents();
 		File file = new File(group.getGroupName() + ".csv");
 		String separator = ",";
 		int count = 0;
 		try (PrintWriter pw = new PrintWriter(file)) {
-			for (int i = 0; i < students.length; i++) {
-				if (students[i] != null) {
-					count++;
-					pw.println(count + separator + students[i].getName() + separator + students[i].getLastName()
-							+ separator + students[i].getGender() + separator + students[i].getId() + separator
-							+ students[i].getGroupName());
-				}
+//			for (int i = 0; i < students.length; i++) {
+//             if (students[i] != null) {
+//          count++;
+//			pw.println(count + separator + students[i].getName() + separator + students[i].getLastName() + separator
+//					+ students[i].getGender() + separator + students[i].getId() + separator
+//					+ students[i].getGroupName());
+//				}
+//			}
+			for (Student student : students) {
+				pw.println(student.getName() + separator + student.getLastName() + separator + student.getGender()
+						+ separator + student.getId());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -40,8 +46,8 @@ public class GroupFileStorage {
 				} else {
 					student.setGender(Gender.Men);
 				}
-				student.setId(Integer.parseInt((studentArr[4])));
-				student.setGroupName(studentArr[5]);
+//				student.setId(Integer.parseInt((studentArr[4])));
+//				student.setGroupName(studentArr[5]);
 
 				try {
 					group.addStudent(student);
